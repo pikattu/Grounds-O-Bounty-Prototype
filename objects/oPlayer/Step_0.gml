@@ -14,3 +14,7 @@ if Mag == 0 { Mag = 1; }
 
 // Apply Movement
 move_and_collide((hVel/Mag)*global.DT, (vVel/Mag)*global.DT, oCollision)
+
+
+// Animations
+PlayerAnimations(hVel,vVel);
