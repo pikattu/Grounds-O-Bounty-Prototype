@@ -26,7 +26,7 @@
   "origin":4,
   "parent":{
     "name":"Crops",
-    "path":"folders/Sprites/Inventory Items/Crops.yy",
+    "path":"folders/Sprites/Crops.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

@@ -13,8 +13,8 @@
   ],
   "name":"rm2_village",
   "parent":{
-    "name":"GroundsOBounty",
-    "path":"GroundsOBounty.yyp",
+    "name":"Rooms",
+    "path":"folders/Rooms.yy",
   },
   "parentRoom":null,
   "physicsSettings":{

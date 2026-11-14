@@ -26,7 +26,7 @@
   "origin":4,
   "parent":{
     "name":"Tools",
-    "path":"folders/Sprites/Inventory Items/Tools.yy",
+    "path":"folders/Sprites/Tools.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

@@ -1,15 +1,13 @@
 {
   "$GMObject":"",
-  "%Name":"pInventory",
-  "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-  ],
+  "%Name":"TRY",
+  "eventList":[],
   "managed":true,
-  "name":"pInventory",
+  "name":"TRY",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"GroundsOBounty",
+    "path":"GroundsOBounty.yyp",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -29,7 +27,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"sInventoryBook",
+    "path":"sprites/sInventoryBook/sInventoryBook.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }

@@ -56,8 +56,7 @@ function ItemInformation()
         Name: "Pineapple Seed",
         Sprite: sPineappleSeeds,
         ItemType: "Seed",
-        GrowTime: 8,
-        HarvestItem: global.ItemPineapple
+
     };
 
     global.ItemCornSeeds =
@@ -65,8 +64,7 @@ function ItemInformation()
         Name: "Corn Seed",
         Sprite: sCornSeeds,
         ItemType: "Seed",
-        GrowTime: 4,
-        HarvestItem: global.ItemCorn
+
     };
 
 
