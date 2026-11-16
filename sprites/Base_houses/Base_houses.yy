@@ -19,8 +19,7 @@
   "height":1000,
   "HTile":false,
   "layers":[
-    {"$GMImageLayer":"","%Name":"dcb77f10-d400-49f8-815c-2c65542e3c50","blendMode":0,"displayName":"Layer 1","isLocked":false,"name":"dcb77f10-d400-49f8-815c-2c65542e3c50","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
-    {"$GMImageLayer":"","%Name":"816be782-e840-4f5d-b48c-fd5670402b22","blendMode":0,"displayName":"Layer 2","isLocked":false,"name":"816be782-e840-4f5d-b48c-fd5670402b22","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"e907f5d2-d8c0-4585-95ad-fadafdb2abc0","blendMode":0,"displayName":"Layer 2","isLocked":false,"name":"e907f5d2-d8c0-4585-95ad-fadafdb2abc0","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
   "name":"Base_houses",
   "nineSlice":null,

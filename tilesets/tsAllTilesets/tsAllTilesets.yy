@@ -1,11 +1,18 @@
 {
   "$GMTileSet":"v1",
-  "%Name":"ts_grass",
+  "%Name":"tsAllTilesets",
   "autoTileSets":[
     {"$GMAutoTileSet":"","%Name":"atGrassDirt","closed_edge":false,"name":"atGrassDirt","resourceType":"GMAutoTileSet","resourceVersion":"2.0","tiles":[
-        2055,2485,2486,0,2548,2489,2491,0,2547,2550,2552,0,2614,0,0,0,2488,2484,2546,2481,2428,2424,2423,2420,
+        2551,2485,2486,0,2548,2489,2491,0,2547,2550,2552,0,2614,0,0,0,2488,2484,2546,2481,2428,2424,2423,2420,
         2553,2549,2487,2483,2613,2609,2610,2544,2480,2606,2426,2419,2429,2421,2615,2545,2612,2543,2418,2605,
         2542,2607,2604,
+      ],},
+    {"$GMAutoTileSet":"","%Name":"atCliffs","closed_edge":false,"name":"atCliffs","resourceType":"GMAutoTileSet","resourceVersion":"2.0","tiles":[
+        195,129,130,0,192,133,0,134,191,0,196,0,258,0,0,126,132,128,190,125,72,68,67,64,197,193,131,127,257,
+        253,254,188,124,250,70,63,73,65,259,189,256,187,62,249,186,251,248,
+      ],},
+    {"$GMAutoTileSet":"","%Name":"atPathway","closed_edge":false,"name":"atPathway","resourceType":"GMAutoTileSet","resourceVersion":"2.0","tiles":[
+        0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
       ],},
   ],
   "macroPageTiles":{
@@ -13,7 +20,7 @@
     "SerialiseWidth":0,
     "TileSerialiseData":[],
   },
-  "name":"ts_grass",
+  "name":"tsAllTilesets",
   "out_columns":76,
   "out_tilehborder":2,
   "out_tilevborder":2,
