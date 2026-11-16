@@ -26,7 +26,7 @@
   "origin":0,
   "parent":{
     "name":"Tools",
-    "path":"folders/Sprites/Tools.yy",
+    "path":"folders/Sprites/Farming System/Tools.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

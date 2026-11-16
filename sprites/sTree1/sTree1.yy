@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":0,
   "parent":{
-    "name":"> EXTERIOR",
-    "path":"folders/Tilesets/> EXTERIOR.yy",
+    "name":"Exterior",
+    "path":"folders/Sprites/Exterior.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

@@ -26,7 +26,7 @@
   "origin":0,
   "parent":{
     "name":"Trees",
-    "path":"folders/Sprites/Trees.yy",
+    "path":"folders/Sprites/Farming System/Trees.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

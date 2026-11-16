@@ -31,8 +31,8 @@
   "resourceType":"GMTileSet",
   "resourceVersion":"2.0",
   "spriteId":{
-    "name":"Tileset_All_Grass",
-    "path":"sprites/Tileset_All_Grass/Tileset_All_Grass.yy",
+    "name":"sAllGrass",
+    "path":"sprites/sAllGrass/sAllGrass.yy",
   },
   "spriteNoExport":false,
   "textureGroupId":{
