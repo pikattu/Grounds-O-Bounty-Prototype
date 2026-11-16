@@ -1,7 +1,13 @@
 {
   "$GMTileSet":"v1",
   "%Name":"ts_grass",
-  "autoTileSets":[],
+  "autoTileSets":[
+    {"$GMAutoTileSet":"","%Name":"atGrassDirt","closed_edge":false,"name":"atGrassDirt","resourceType":"GMAutoTileSet","resourceVersion":"2.0","tiles":[
+        2055,2485,2486,0,2548,2489,2491,0,2547,2550,2552,0,2614,0,0,0,2488,2484,2546,2481,2428,2424,2423,2420,
+        2553,2549,2487,2483,2613,2609,2610,2544,2480,2606,2426,2419,2429,2421,2615,2545,2612,2543,2418,2605,
+        2542,2607,2604,
+      ],},
+  ],
   "macroPageTiles":{
     "SerialiseHeight":0,
     "SerialiseWidth":0,
