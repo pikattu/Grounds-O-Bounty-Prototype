@@ -99,6 +99,7 @@
     {"id":{"name":"pNpcs","path":"objects/pNpcs/pNpcs.yy",},},
     {"id":{"name":"TRY","path":"objects/TRY/TRY.yy",},},
     {"id":{"name":"rFarm","path":"rooms/rFarm/rFarm.yy",},},
+    {"id":{"name":"rVillage","path":"rooms/rVillage/rVillage.yy",},},
     {"id":{"name":"InventoryFunctions","path":"scripts/InventoryFunctions/InventoryFunctions.yy",},},
     {"id":{"name":"ItemInformation","path":"scripts/ItemInformation/ItemInformation.yy",},},
     {"id":{"name":"PlayerFunctions","path":"scripts/PlayerFunctions/PlayerFunctions.yy",},},
@@ -197,6 +198,7 @@
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
     {"roomId":{"name":"rFarm","path":"rooms/rFarm/rFarm.yy",},},
+    {"roomId":{"name":"rVillage","path":"rooms/rVillage/rVillage.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[
