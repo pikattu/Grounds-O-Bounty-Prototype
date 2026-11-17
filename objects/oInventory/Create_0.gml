@@ -1,12 +1,14 @@
 ItemInformation();
+CropInformation();
 // Inv Size
-InvWidth = 6;
+InvWidth = 5;
 InvHeight = 5;
 
 Inv = array_create(InvWidth*InvHeight, -1);
 
 // Open Inventory
 InvOpen = false;
+HotbarSelect = 0;
 
 // Drag Item Variables
 
@@ -26,3 +28,8 @@ book_sprite = sInventoryBook;
 
 // STARTING ITEMS
 InventoryAdd(Inv,global.ItemCorn,4);
+InventoryAdd(Inv,global.ItemPineappleSeeds,4);
+InventoryAdd(Inv,global.ItemHoe,1);
+InventoryAdd(Inv,global.ItemCornSeeds,4);
+InventoryAdd(Inv,global.ItemStrawberrySeeds,4);
+InventoryAdd(Inv,global.ItemRiceSeeds,4);

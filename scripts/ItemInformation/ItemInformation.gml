@@ -78,4 +78,15 @@ function ItemInformation()
         Sprite: sHoe,
         ItemType: "Tool"
     };
+	
+	// =========================
+    // ETC
+    // =========================
+	
+	global.ItemFertilizer =
+    {
+        Name: "Fertilizer",
+        Sprite: sFertilizer,
+        ItemType: "Fertilizer"
+    };
 }

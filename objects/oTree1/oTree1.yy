@@ -6,8 +6,8 @@
   "name":"oTree1",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"Exterior",
+    "path":"folders/Objects/Exterior.yy",
   },
   "parentObjectId":null,
   "persistent":false,

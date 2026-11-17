@@ -6,8 +6,8 @@
   "name":"oHouseOrange",
   "overriddenProperties":[],
   "parent":{
-    "name":"Buildings",
-    "path":"folders/Objects/Buildings.yy",
+    "name":"Exterior",
+    "path":"folders/Objects/Exterior.yy",
   },
   "parentObjectId":null,
   "persistent":false,
