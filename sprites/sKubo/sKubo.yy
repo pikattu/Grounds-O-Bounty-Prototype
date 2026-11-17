@@ -19,7 +19,7 @@
   "height":91,
   "HTile":false,
   "layers":[
-    {"$GMImageLayer":"","%Name":"4688a67f-c2ad-4dba-978f-f3c4541d7b4a","blendMode":0,"displayName":"Layer 2","isLocked":false,"name":"4688a67f-c2ad-4dba-978f-f3c4541d7b4a","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"1a76dc7f-7561-4598-b282-716b408228cb","blendMode":0,"displayName":"Layer 2","isLocked":false,"name":"1a76dc7f-7561-4598-b282-716b408228cb","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
   "name":"sKubo",
   "nineSlice":null,
