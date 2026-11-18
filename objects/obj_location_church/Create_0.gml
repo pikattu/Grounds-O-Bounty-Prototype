@@ -1,0 +1,1 @@
+allowed_roles = ["mayor", "eduardo", "hope"];
