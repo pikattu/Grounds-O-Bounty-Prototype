@@ -12,6 +12,7 @@
   "Folders":[
     {"$GMFolder":"","%Name":"Fonts","folderPath":"folders/Fonts.yy","name":"Fonts","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"group1","folderPath":"folders/group1.yy","name":"group1","resourceType":"GMFolder","resourceVersion":"2.0",},
+    {"$GMFolder":"","%Name":"NPC Locations","folderPath":"folders/NPC Locations.yy","name":"NPC Locations","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Objects","folderPath":"folders/Objects.yy","name":"Objects","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Exterior","folderPath":"folders/Objects/Exterior.yy","name":"Exterior","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Farming System","folderPath":"folders/Objects/Farming System.yy","name":"Farming System","resourceType":"GMFolder","resourceVersion":"2.0",},
@@ -74,6 +75,12 @@
   "resources":[
     {"id":{"name":"fHotbar","path":"fonts/fHotbar/fHotbar.yy",},},
     {"id":{"name":"oBasketballCourt","path":"objects/oBasketballCourt/oBasketballCourt.yy",},},
+    {"id":{"name":"obj_location_","path":"objects/obj_location_/obj_location_.yy",},},
+    {"id":{"name":"obj_location_antique","path":"objects/obj_location_antique/obj_location_antique.yy",},},
+    {"id":{"name":"obj_location_church","path":"objects/obj_location_church/obj_location_church.yy",},},
+    {"id":{"name":"obj_location_court","path":"objects/obj_location_court/obj_location_court.yy",},},
+    {"id":{"name":"obj_location_karinderya","path":"objects/obj_location_karinderya/obj_location_karinderya.yy",},},
+    {"id":{"name":"obj_location_school","path":"objects/obj_location_school/obj_location_school.yy",},},
     {"id":{"name":"oCamera","path":"objects/oCamera/oCamera.yy",},},
     {"id":{"name":"oChurch","path":"objects/oChurch/oChurch.yy",},},
     {"id":{"name":"oCollision","path":"objects/oCollision/oCollision.yy",},},
@@ -109,6 +116,8 @@
     {"id":{"name":"InventoryFunctions","path":"scripts/InventoryFunctions/InventoryFunctions.yy",},},
     {"id":{"name":"ItemInformation","path":"scripts/ItemInformation/ItemInformation.yy",},},
     {"id":{"name":"PlayerFunctions","path":"scripts/PlayerFunctions/PlayerFunctions.yy",},},
+    {"id":{"name":"scr_NpcCollision","path":"scripts/scr_NpcCollision/scr_NpcCollision.yy",},},
+    {"id":{"name":"scr_NpcPathing","path":"scripts/scr_NpcPathing/scr_NpcPathing.yy",},},
     {"id":{"name":"Banana_Tree","path":"sprites/Banana_Tree/Banana_Tree.yy",},},
     {"id":{"name":"Base_houses","path":"sprites/Base_houses/Base_houses.yy",},},
     {"id":{"name":"Beach_animations_tiles","path":"sprites/Beach_animations_tiles/Beach_animations_tiles.yy",},},
@@ -185,6 +194,7 @@
     {"id":{"name":"sPlayerWalkUp","path":"sprites/sPlayerWalkUp/sPlayerWalkUp.yy",},},
     {"id":{"name":"sPlot","path":"sprites/sPlot/sPlot.yy",},},
     {"id":{"name":"spr_Collision","path":"sprites/spr_Collision/spr_Collision.yy",},},
+    {"id":{"name":"spr_Location_","path":"sprites/spr_Location_/spr_Location_.yy",},},
     {"id":{"name":"sPrincessIdleDown","path":"sprites/sPrincessIdleDown/sPrincessIdleDown.yy",},},
     {"id":{"name":"sPrincessIdleLeft","path":"sprites/sPrincessIdleLeft/sPrincessIdleLeft.yy",},},
     {"id":{"name":"sPrincessIdleRight","path":"sprites/sPrincessIdleRight/sPrincessIdleRight.yy",},},
@@ -215,8 +225,8 @@
   "resourceType":"GMProject",
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
-    {"roomId":{"name":"rFarm","path":"rooms/rFarm/rFarm.yy",},},
     {"roomId":{"name":"rVillage","path":"rooms/rVillage/rVillage.yy",},},
+    {"roomId":{"name":"rFarm","path":"rooms/rFarm/rFarm.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[
