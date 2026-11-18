@@ -53,7 +53,7 @@
   ],
   "isDnd":false,
   "layers":[
-    {"$GMRTileLayer":"","%Name":"tColissions","depth":-200,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"tColissions","properties":[],"resourceType":"GMRTileLayer","resourceVersion":"2.0","tiles":{"SerialiseHeight":60,"SerialiseWidth":107,"TileCompressedData":[
+    {"$GMRTileLayer":"","%Name":"tCollisions","depth":-200,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"tCollisions","properties":[],"resourceType":"GMRTileLayer","resourceVersion":"2.0","tiles":{"SerialiseHeight":60,"SerialiseWidth":107,"TileCompressedData":[
           -55,-2147483648,1,1,-8,-2147483648,1,1,-9,-2147483648,-2,1,-4,-2147483648,1,1,-81,-2147483648,1,1,-8,
           -2147483648,1,1,-9,-2147483648,-2,1,-4,-2147483648,1,1,-81,-2147483648,1,1,-8,-2147483648,1,1,-9,-2147483648,
           -2,1,-4,-2147483648,1,1,-81,-2147483648,1,1,-9,-2147483648,-2,1,-7,-2147483648,-2,1,-4,-2147483648,1,
@@ -105,7 +105,7 @@
           -4,1,-50,-2147483648,-18,1,-19,-2147483648,-4,1,-9,-2147483648,1,0,-3,1,-56,-2147483648,-13,1,-23,-2147483648,
           -2,1,-9,-2147483648,-4,1,-92,-2147483648,-3,1,1,0,-5,-2147483648,3,0,1,1,-96,-2147483648,-11,1,-98,-2147483648,
           -7,1,-368,-2147483648,
-        ],"TileDataFormat":1,},"tilesetId":{"name":"tCollision","path":"tilesets/tCollision/tCollision.yy",},"userdefinedDepth":false,"visible":true,"x":0,"y":0,},
+        ],"TileDataFormat":1,},"tilesetId":{"name":"tCollision","path":"tilesets/tCollision/tCollision.yy",},"userdefinedDepth":false,"visible":false,"x":0,"y":0,},
     {"$GMRInstanceLayer":"","%Name":"book","depth":-100,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
         {"$GMRInstance":"v4","%Name":"inst_2AC1D67A","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_2AC1D67A","objectId":{"name":"TRY","path":"objects/TRY/TRY.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":96.0,"y":64.0,},
       ],"layers":[],"name":"book","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":false,},
