@@ -38,15 +38,15 @@ function InvRemove(InvArray, Item) {
     for (var i = 0; i < array_length(InvArray); i++) {
         if (InvArray[i] != -1) {
             if (InvArray[i][0] == Item) {
-
-                InvArray[i][1]--;
-
-                // Empty slot if quantity reaches zero
-                if (InvArray[i][1] <= 0) {
-                    InvArray[i] = -1;
-                }
-
-                return;
+				
+				if InvArray[i][1] > 1 {
+					InvArray[i][1]--;
+					return;
+					
+				} else {
+	            // Empty slot if quantity reaches zers
+					InvArray[i] = -1;
+				}
             }
         }
     }
@@ -106,4 +106,20 @@ function ShowItemDrag() {
     }
 
     return;
+}
+
+function InventoryHasRoom(InvArray, Item) {
+
+    // Check if we have space or an existing stack of the item
+    for (var i = 0; i < array_length(InvArray); i++) {
+
+        if (InvArray[i] == -1) {
+            return true;
+        }
+        else if (InvArray[i][0] == Item) {
+            return true;
+        }
+    }
+
+    return false;
 }
