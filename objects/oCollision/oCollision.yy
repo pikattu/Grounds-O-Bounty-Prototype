@@ -6,8 +6,8 @@
   "name":"oCollision",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"Miscallaneusue",
+    "path":"folders/Objects/Miscallaneusue.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -27,7 +27,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"sCollision",
+    "path":"sprites/sCollision/sCollision.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }

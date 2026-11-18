@@ -9,7 +9,10 @@
     "name":"Exterior",
     "path":"folders/Objects/Exterior.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"pDepthFix",
+    "path":"objects/pDepthFix/pDepthFix.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,

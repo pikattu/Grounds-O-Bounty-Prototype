@@ -15,7 +15,7 @@ if Mag == 0 { Mag = 1; }
 // Animations
 PlayerAnimations(hVel,vVel);
 
-var lay_id = layer_get_id("tCollisions");
+var lay_id = layer_get_id("tCollision");
 var map_id = layer_tilemap_get_id(lay_id);
 
 if (kLeft == 1) {

@@ -1,1 +1,0 @@
-npc_nav_step();

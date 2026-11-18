@@ -18,8 +18,8 @@
   "resourceType":"GMTileSet",
   "resourceVersion":"2.0",
   "spriteId":{
-    "name":"spr_Collision",
-    "path":"sprites/spr_Collision/spr_Collision.yy",
+    "name":"stsCollision",
+    "path":"sprites/stsCollision/stsCollision.yy",
   },
   "spriteNoExport":false,
   "textureGroupId":{
