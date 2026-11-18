@@ -27,7 +27,7 @@
   "origin":0,
   "parent":{
     "name":"Exterior",
-    "path":"folders/Sprites/Exterior.yy",
+    "path":"folders/Sprites/Look and feel/Exterior.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",
