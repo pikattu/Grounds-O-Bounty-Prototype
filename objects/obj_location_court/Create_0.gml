@@ -1,0 +1,1 @@
+allowed_roles = ["joshua", "MJ", "kristine", "princess"];
