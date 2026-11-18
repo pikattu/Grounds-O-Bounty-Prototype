@@ -11,6 +11,8 @@
   "defaultScriptType":1,
   "Folders":[
     {"$GMFolder":"","%Name":"Fonts","folderPath":"folders/Fonts.yy","name":"Fonts","resourceType":"GMFolder","resourceVersion":"2.0",},
+    {"$GMFolder":"","%Name":"group1","folderPath":"folders/group1.yy","name":"group1","resourceType":"GMFolder","resourceVersion":"2.0",},
+    {"$GMFolder":"","%Name":"NPC Locations","folderPath":"folders/NPC Locations.yy","name":"NPC Locations","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Objects","folderPath":"folders/Objects.yy","name":"Objects","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Buildings","folderPath":"folders/Objects/Buildings.yy","name":"Buildings","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Rooms","folderPath":"folders/Rooms.yy","name":"Rooms","resourceType":"GMFolder","resourceVersion":"2.0",},
@@ -67,7 +69,7 @@
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2026.0.0.16",
+    "IDEVersion":"2026.1.0.27",
   },
   "name":"GroundsOBounty",
   "resources":[
@@ -182,6 +184,9 @@
     {"id":{"name":"sPlayerWalkDown","path":"sprites/sPlayerWalkDown/sPlayerWalkDown.yy",},},
     {"id":{"name":"sPlayerWalkSide","path":"sprites/sPlayerWalkSide/sPlayerWalkSide.yy",},},
     {"id":{"name":"sPlayerWalkUp","path":"sprites/sPlayerWalkUp/sPlayerWalkUp.yy",},},
+    {"id":{"name":"sPlot","path":"sprites/sPlot/sPlot.yy",},},
+    {"id":{"name":"spr_Collision","path":"sprites/spr_Collision/spr_Collision.yy",},},
+    {"id":{"name":"spr_Location_","path":"sprites/spr_Location_/spr_Location_.yy",},},
     {"id":{"name":"sPrincessIdleDown","path":"sprites/sPrincessIdleDown/sPrincessIdleDown.yy",},},
     {"id":{"name":"sPrincessIdleLeft","path":"sprites/sPrincessIdleLeft/sPrincessIdleLeft.yy",},},
     {"id":{"name":"sPrincessIdleRight","path":"sprites/sPrincessIdleRight/sPrincessIdleRight.yy",},},
@@ -211,8 +216,8 @@
   "resourceType":"GMProject",
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
-    {"roomId":{"name":"rm_village","path":"rooms/rm_village/rm_village.yy",},},
-    {"roomId":{"name":"rm2_village","path":"rooms/rm2_village/rm2_village.yy",},},
+    {"roomId":{"name":"rVillage","path":"rooms/rVillage/rVillage.yy",},},
+    {"roomId":{"name":"rFarm","path":"rooms/rFarm/rFarm.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[
