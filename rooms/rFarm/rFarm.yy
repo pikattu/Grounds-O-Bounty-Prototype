@@ -47,6 +47,22 @@
     {"$GMRInstanceLayer":"","%Name":"Player","depth":181,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
         {"$GMRInstance":"v4","%Name":"inst_70D13202","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_70D13202","objectId":{"name":"oPlayer","path":"objects/oPlayer/oPlayer.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":599.0,"y":347.0,},
       ],"layers":[],"name":"Player","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
+    {"$GMRTileLayer":"","%Name":"tCollisions","depth":181,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"tCollisions","properties":[],"resourceType":"GMRTileLayer","resourceVersion":"2.0","tiles":{"SerialiseHeight":38,"SerialiseWidth":57,"TileCompressedData":[
+          -34,-2147483648,-16,1,-41,-2147483648,-17,1,-8,-2147483648,-15,1,-15,-2147483648,-3,1,-15,-2147483648,
+          -3,1,-6,-2147483648,-15,1,-15,-2147483648,-3,1,-15,-2147483648,-7,1,-2,-2147483648,1,1,-13,-2147483648,
+          -2,1,-14,-2147483648,1,1,-20,-2147483648,-3,1,-3,-2147483648,1,1,-13,-2147483648,-17,1,-25,-2147483648,
+          -2,1,-15,-2147483648,-15,1,-24,-2147483648,-3,1,-54,-2147483648,1,1,-56,-2147483648,1,1,-52,-2147483648,
+          -2,1,-2,-2147483648,1,1,-47,-2147483648,-10,1,-47,-2147483648,-5,1,-2,-2147483648,-2,1,-28,-2147483648,
+          -4,1,-10,-2147483648,-4,1,-33,-2147483648,1,1,-4,-2147483648,-8,1,-7,-2147483648,-4,1,-32,-2147483648,
+          -7,1,-4,-2147483648,-3,1,-7,-2147483648,1,1,-35,-2147483648,2,1,-2147483648,-5,1,-6,-2147483648,1,1,
+          -4,-2147483648,-4,1,-33,-2147483648,-3,1,-12,-2147483648,-9,1,-32,-2147483648,-4,1,-12,-2147483648,-5,
+          1,-35,-2147483648,-2,1,-55,-2147483648,1,1,-39,-2147483648,1,1,-16,-2147483648,1,1,-39,-2147483648,-2,
+          1,-15,-2147483648,1,1,-40,-2147483648,-2,1,-14,-2147483648,1,1,-41,-2147483648,-3,1,-7,-2147483648,-6,
+          1,-41,-2147483648,-16,1,-44,-2147483648,-7,1,-98,-2147483648,-4,1,-53,-2147483648,1,1,-54,-2147483648,
+          -2,1,-53,-2147483648,-2,1,-20,-2147483648,-8,1,-27,-2147483648,1,1,-17,-2147483648,-4,1,-7,-2147483648,
+          1,1,-27,-2147483648,1,1,-7,-2147483648,-3,1,-7,-2147483648,1,1,-10,-2147483648,1,1,-21,-2147483648,-6,
+          1,-11,-2147483648,-7,1,-11,-2147483648,-6,1,-16,-2147483648,1,1,-40,-2147483648,-16,1,-185,-2147483648,
+        ],"TileDataFormat":1,},"tilesetId":{"name":"tCollision","path":"tilesets/tCollision/tCollision.yy",},"userdefinedDepth":false,"visible":false,"x":0,"y":0,},
     {"$GMRInstanceLayer":"","%Name":"Instances","depth":262,"effectEnabled":true,"effectType":null,"gridX":16,"gridY":16,"hierarchyFrozen":false,"inheritLayerDepth":true,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":false,"instances":[
         {"$GMRInstance":"v4","%Name":"inst_5004783","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_5004783","objectId":{"name":"oGameManager","path":"objects/oGameManager/oGameManager.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":16.0,"y":16.0,},
         {"$GMRInstance":"v4","%Name":"inst_2EBC7D52","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_2EBC7D52","objectId":{"name":"oDeltaTime","path":"objects/oDeltaTime/oDeltaTime.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":32.0,"y":16.0,},
