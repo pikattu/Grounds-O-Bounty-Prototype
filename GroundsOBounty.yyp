@@ -68,7 +68,7 @@
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2026.0.0.16",
+    "IDEVersion":"2026.1.0.27",
   },
   "name":"GroundsOBounty",
   "resources":[
@@ -184,6 +184,7 @@
     {"id":{"name":"sPlayerWalkSide","path":"sprites/sPlayerWalkSide/sPlayerWalkSide.yy",},},
     {"id":{"name":"sPlayerWalkUp","path":"sprites/sPlayerWalkUp/sPlayerWalkUp.yy",},},
     {"id":{"name":"sPlot","path":"sprites/sPlot/sPlot.yy",},},
+    {"id":{"name":"spr_Collision","path":"sprites/spr_Collision/spr_Collision.yy",},},
     {"id":{"name":"sPrincessIdleDown","path":"sprites/sPrincessIdleDown/sPrincessIdleDown.yy",},},
     {"id":{"name":"sPrincessIdleLeft","path":"sprites/sPrincessIdleLeft/sPrincessIdleLeft.yy",},},
     {"id":{"name":"sPrincessIdleRight","path":"sprites/sPrincessIdleRight/sPrincessIdleRight.yy",},},
@@ -206,6 +207,7 @@
     {"id":{"name":"sTree2","path":"sprites/sTree2/sTree2.yy",},},
     {"id":{"name":"Summer_Waterfall","path":"sprites/Summer_Waterfall/Summer_Waterfall.yy",},},
     {"id":{"name":"sWateringCan","path":"sprites/sWateringCan/sWateringCan.yy",},},
+    {"id":{"name":"tCollision","path":"tilesets/tCollision/tCollision.yy",},},
     {"id":{"name":"tsAllCrops","path":"tilesets/tsAllCrops/tsAllCrops.yy",},},
     {"id":{"name":"tsAllHouses","path":"tilesets/tsAllHouses/tsAllHouses.yy",},},
     {"id":{"name":"tsAllTilesets","path":"tilesets/tsAllTilesets/tsAllTilesets.yy",},},
