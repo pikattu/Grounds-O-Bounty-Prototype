@@ -87,6 +87,7 @@
     {"id":{"name":"oHousePlayer","path":"objects/oHousePlayer/oHousePlayer.yy",},},
     {"id":{"name":"oHouseRed","path":"objects/oHouseRed/oHouseRed.yy",},},
     {"id":{"name":"oInventory","path":"objects/oInventory/oInventory.yy",},},
+    {"id":{"name":"oItem","path":"objects/oItem/oItem.yy",},},
     {"id":{"name":"oJoshua","path":"objects/oJoshua/oJoshua.yy",},},
     {"id":{"name":"oKarinderya","path":"objects/oKarinderya/oKarinderya.yy",},},
     {"id":{"name":"oKristine","path":"objects/oKristine/oKristine.yy",},},

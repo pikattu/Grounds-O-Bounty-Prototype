@@ -28,8 +28,9 @@ book_sprite = sInventoryBook;
 
 // STARTING ITEMS
 InventoryAdd(Inv,global.ItemCorn,4);
-InventoryAdd(Inv,global.ItemPineappleSeeds,4);
+InventoryAdd(Inv,global.ItemPineappleSeeds,1);
 InventoryAdd(Inv,global.ItemHoe,1);
 InventoryAdd(Inv,global.ItemCornSeeds,4);
 InventoryAdd(Inv,global.ItemStrawberrySeeds,4);
 InventoryAdd(Inv,global.ItemRiceSeeds,4);
+InventoryAdd(Inv,global.ItemFertilizer,4);

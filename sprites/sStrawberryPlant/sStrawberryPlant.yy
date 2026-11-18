@@ -27,7 +27,7 @@
   ],
   "name":"sStrawberryPlant",
   "nineSlice":null,
-  "origin":7,
+  "origin":9,
   "parent":{
     "name":"Growth Stage",
     "path":"folders/Sprites/Farming System/Growth Stage.yy",
@@ -92,7 +92,7 @@
     "visibleRange":null,
     "volume":1.0,
     "xorigin":8,
-    "yorigin":16,
+    "yorigin":13,
   },
   "swatchColours":null,
   "swfPrecision":0.5,

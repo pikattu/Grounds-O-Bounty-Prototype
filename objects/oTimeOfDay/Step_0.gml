@@ -7,9 +7,14 @@ if Tick >= 10 {
 		
 		//grow if crop is defined
 		if Crop != undefined {
-			Tick++;
+			if isFertilized == true {
+				Tick+=2;
+			} else {
+				Tick++;
+			}
 		} else {
 			Tick = 0;
+
 		}
 		
 	} 

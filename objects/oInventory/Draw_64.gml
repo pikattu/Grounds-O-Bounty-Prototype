@@ -82,17 +82,50 @@ if InvOpen {
 } 
 
 // use items
-
-if Inv[HotbarSelect] != -1 {
+if mouse_check_button_pressed(mb_left) and !InvOpen {
 	
-	if mouse_check_button_pressed(mb_left) and !InvOpen {
-		
+	// Harvest
+	var NC = instance_nearest(mouse_x, mouse_y, oPlot); // NC ? nearest crop
+	if NC.Crop != undefined {
+		if point_in_rectangle(mouse_x,mouse_y,NC.x-8, NC.y-8,NC.x+8, NC.y+8) and point_distance(oPlayer.x,oPlayer.y,NC.x, NC.y) < 32 {
+			if NC.Tick >= NC.Crop.GrowTime{
+						
+				var Item = NC.Crop.Drop[0];
+				var Amount = NC.Crop.Drop[1];
+				
+				repeat(Amount){
+					var Drop= instance_create_depth(NC.x,NC.y,0,oItem);
+					Drop.Item = Item;
+				}
+						
+						
+				NC.Crop = undefined;
+				NC.Tick = 0;
+				NC.isFertilized = false;
+					
+			}
+		}
+	}
+	
+	// Use item
+	if Inv[HotbarSelect] != -1 {
+	
 		switch(Inv[HotbarSelect][0].ItemType){
 			
 			case "Crop":
 			break;
 			
-			case "Hoe":
+			case "Tool":
+			
+				var xx = round(mouse_x/16)*16;
+				var yy = round(mouse_y/16)*16;
+				
+				if !collision_rectangle(xx-2, yy-2, xx+2,yy+2, oPlot,0,1) {
+					instance_create_depth(xx,yy,0,oPlot);
+				}
+				
+			
+			
 			break;
 			
 			case "Seed":
@@ -125,14 +158,27 @@ if Inv[HotbarSelect] != -1 {
 						break;
 					}
 					NP.Crop = Crop;
+					InventoryRemove(Inv, Inv[HotbarSelect][0], 1);
 				} 
 				
 			break;
 			
 			case "Fertilizer":
+			
+			var NP = instance_nearest(mouse_x, mouse_y, oPlot);
+				if point_in_rectangle(mouse_x,mouse_y,NP.x-8, NP.y-8,NP.x+8, NP.y+8) and point_distance(oPlayer.x,oPlayer.y,NP.x, NP.y) < 32 {
+				
+				
+					NP.isFertilized = true;
+					InventoryRemove(Inv, Inv[HotbarSelect][0], 1);
+				}
+					
 			break;
+	
 		}
 	}
+		
+	
 }
 
 

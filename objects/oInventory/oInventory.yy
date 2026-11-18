@@ -10,8 +10,8 @@
   "name":"oInventory",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"Farming System",
+    "path":"folders/Objects/Farming System.yy",
   },
   "parentObjectId":null,
   "persistent":false,
