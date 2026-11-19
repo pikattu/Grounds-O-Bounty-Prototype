@@ -1,25 +1,11 @@
 {
   "$GMSprite":"v2",
   "%Name":"sTree1",
-<<<<<<< HEAD
-=======
-<<<<<<< Updated upstream
->>>>>>> parent of 2ca2491 (feat(daynight cycle))
-  "bboxMode":0,
-  "bbox_bottom":45,
-  "bbox_left":0,
-  "bbox_right":31,
-  "bbox_top":0,
-<<<<<<< HEAD
-=======
-=======
   "bboxMode":2,
   "bbox_bottom":43,
   "bbox_left":10,
   "bbox_right":22,
   "bbox_top":32,
->>>>>>> Stashed changes
->>>>>>> parent of 2ca2491 (feat(daynight cycle))
   "collisionKind":1,
   "collisionTolerance":0,
   "DynamicTexturePage":false,
@@ -37,7 +23,7 @@
   ],
   "name":"sTree1",
   "nineSlice":null,
-  "origin":0,
+  "origin":7,
   "parent":{
     "name":"Exterior",
     "path":"folders/Sprites/Look and feel/Exterior.yy",
@@ -89,8 +75,8 @@
     ],
     "visibleRange":null,
     "volume":1.0,
-    "xorigin":0,
-    "yorigin":0,
+    "xorigin":16,
+    "yorigin":46,
   },
   "swatchColours":null,
   "swfPrecision":0.5,

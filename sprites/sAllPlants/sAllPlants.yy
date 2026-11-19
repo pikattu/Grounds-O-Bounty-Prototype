@@ -2,21 +2,9 @@
   "$GMSprite":"v2",
   "%Name":"sAllPlants",
   "bboxMode":0,
-<<<<<<< HEAD
-  "bbox_bottom":716,
-  "bbox_left":1,
-  "bbox_right":365,
-=======
-<<<<<<< Updated upstream
-  "bbox_bottom":716,
-  "bbox_left":1,
-  "bbox_right":365,
-=======
   "bbox_bottom":879,
   "bbox_left":8,
   "bbox_right":602,
->>>>>>> Stashed changes
->>>>>>> parent of 2ca2491 (feat(daynight cycle))
   "bbox_top":16,
   "collisionKind":1,
   "collisionTolerance":0,
@@ -31,6 +19,7 @@
   "height":1000,
   "HTile":false,
   "layers":[
+    {"$GMImageLayer":"","%Name":"55d63fde-8c9d-467b-adad-205d95755232","blendMode":0,"displayName":"Layer 1","isLocked":false,"name":"55d63fde-8c9d-467b-adad-205d95755232","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
     {"$GMImageLayer":"","%Name":"1140c4c4-a2a7-4ac7-bf14-b3d1803123ac","blendMode":0,"displayName":"default","isLocked":false,"name":"1140c4c4-a2a7-4ac7-bf14-b3d1803123ac","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
   "name":"sAllPlants",

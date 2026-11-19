@@ -1,27 +1,11 @@
 {
   "$GMSprite":"v2",
   "%Name":"sHousePlayer",
-<<<<<<< HEAD
-  "bboxMode":0,
-  "bbox_bottom":91,
-  "bbox_left":0,
-  "bbox_right":93,
-  "bbox_top":0,
-=======
-<<<<<<< Updated upstream
-  "bboxMode":0,
-  "bbox_bottom":91,
-  "bbox_left":0,
-  "bbox_right":93,
-  "bbox_top":0,
-=======
   "bboxMode":2,
   "bbox_bottom":82,
   "bbox_left":0,
   "bbox_right":92,
   "bbox_top":26,
->>>>>>> Stashed changes
->>>>>>> parent of 2ca2491 (feat(daynight cycle))
   "collisionKind":1,
   "collisionTolerance":0,
   "DynamicTexturePage":false,
@@ -39,7 +23,7 @@
   ],
   "name":"sHousePlayer",
   "nineSlice":null,
-  "origin":0,
+  "origin":7,
   "parent":{
     "name":"Buildings",
     "path":"folders/Sprites/Look and feel/Exterior/Buildings.yy",
@@ -91,8 +75,8 @@
     ],
     "visibleRange":null,
     "volume":1.0,
-    "xorigin":0,
-    "yorigin":0,
+    "xorigin":47,
+    "yorigin":92,
   },
   "swatchColours":null,
   "swfPrecision":0.5,

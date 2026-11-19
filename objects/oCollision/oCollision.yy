@@ -1,13 +1,16 @@
 {
   "$GMObject":"",
   "%Name":"oCollision",
-  "eventList":[],
+  "eventList":[
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+  ],
   "managed":true,
   "name":"oCollision",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"Miscallaneusue",
+    "path":"folders/Objects/Miscallaneusue.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -27,7 +30,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"sCollision",
+    "path":"sprites/sCollision/sCollision.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }

@@ -1,29 +1,28 @@
+
 // Input
-var kLeft = keyboard_check(ord("A"));
+var kLeft  = keyboard_check(ord("A"));
 var kRight = keyboard_check(ord("D"));
-var kUp = keyboard_check(ord("W"));
-var kDown = keyboard_check(ord("S"));
+var kUp    = keyboard_check(ord("W"));
+var kDown  = keyboard_check(ord("S"));
 
 // Calculate Movement
 var hVel = (kRight - kLeft) * moveSpeed;
 var vVel = (kDown - kUp) * moveSpeed;
 
-// Fixing Diagonal Movement
-var Mag = sqrt((hVel*hVel) + (vVel*vVel));
-if Mag == 0 { Mag = 1; }
+// Fix Diagonal Movement
+var Mag = sqrt(hVel * hVel + vVel * vVel);
 
-// Apply Movement
-move_and_collide((hVel/Mag)*global.DT, (vVel/Mag)*global.DT, oCollision)
+if (Mag > 0) {
+    hVel /= Mag;
+    vVel /= Mag;
+}
+
 
 
 // Animations
-<<<<<<< HEAD
+
 PlayerAnimations(hVel,vVel);
-=======
-<<<<<<< Updated upstream
-PlayerAnimations(hVel,vVel);
-=======
-PlayerAnimations(hVel, vVel);
+
 
 // Get Collision Tilemap
 var lay_id = layer_get_id("tCollision");
@@ -69,5 +68,3 @@ if (vVel != 0) {
 
 // Depth
 depth = -y;
->>>>>>> Stashed changes
->>>>>>> parent of 2ca2491 (feat(daynight cycle))

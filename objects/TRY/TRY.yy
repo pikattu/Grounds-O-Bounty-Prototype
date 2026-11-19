@@ -6,8 +6,8 @@
   "name":"TRY",
   "overriddenProperties":[],
   "parent":{
-    "name":"GroundsOBounty",
-    "path":"GroundsOBounty.yyp",
+    "name":"Sprites",
+    "path":"folders/Sprites.yy",
   },
   "parentObjectId":null,
   "persistent":false,

@@ -1,21 +1,11 @@
 {
   "$GMSprite":"v2",
   "%Name":"sMayorHouse",
-<<<<<<< HEAD
-  "bboxMode":0,
-  "bbox_bottom":129,
-=======
-<<<<<<< Updated upstream
-  "bboxMode":0,
-  "bbox_bottom":129,
-=======
   "bboxMode":2,
   "bbox_bottom":123,
->>>>>>> Stashed changes
->>>>>>> parent of 2ca2491 (feat(daynight cycle))
   "bbox_left":0,
   "bbox_right":81,
-  "bbox_top":0,
+  "bbox_top":47,
   "collisionKind":1,
   "collisionTolerance":0,
   "DynamicTexturePage":false,
@@ -33,7 +23,7 @@
   ],
   "name":"sMayorHouse",
   "nineSlice":null,
-  "origin":0,
+  "origin":7,
   "parent":{
     "name":"Buildings",
     "path":"folders/Sprites/Look and feel/Exterior/Buildings.yy",
@@ -85,8 +75,8 @@
     ],
     "visibleRange":null,
     "volume":1.0,
-    "xorigin":0,
-    "yorigin":0,
+    "xorigin":41,
+    "yorigin":130,
   },
   "swatchColours":null,
   "swfPrecision":0.5,

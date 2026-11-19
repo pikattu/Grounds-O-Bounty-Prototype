@@ -1,7 +1,9 @@
 {
   "$GMObject":"",
   "%Name":"oKubo",
-  "eventList":[],
+  "eventList":[
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+  ],
   "managed":true,
   "name":"oKubo",
   "overriddenProperties":[],
@@ -9,18 +11,10 @@
     "name":"Exterior",
     "path":"folders/Objects/Exterior.yy",
   },
-<<<<<<< HEAD
-  "parentObjectId":null,
-=======
-<<<<<<< Updated upstream
-  "parentObjectId":null,
-=======
   "parentObjectId":{
     "name":"oCollision",
     "path":"objects/oCollision/oCollision.yy",
   },
->>>>>>> Stashed changes
->>>>>>> parent of 2ca2491 (feat(daynight cycle))
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
