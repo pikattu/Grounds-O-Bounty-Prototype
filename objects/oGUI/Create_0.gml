@@ -10,15 +10,7 @@ Inv = array_create(InvWidth*InvHeight, -1);
 InvOpen = false;
 HotbarSelect = 0;
 
-// Drag Item Variables
 
-	// To chests
-	InvFrom = undefined;
-	InvTo = undefined; 
-	
-	// Within Inventory
-	SlotFrom = undefined;
-	SlotTo = undefined;
 
 // Gui Init
 display_set_gui_size(oCamera.camWidth,oCamera.camHeight);
@@ -34,3 +26,19 @@ InventoryAdd(Inv,global.ItemCornSeeds,4);
 InventoryAdd(Inv,global.ItemStrawberrySeeds,4);
 InventoryAdd(Inv,global.ItemRiceSeeds,4);
 InventoryAdd(Inv,global.ItemFertilizer,4);
+
+// Drag Variables
+InvFrom = undefined;
+InvTo = undefined;
+
+SlotFrom = undefined;
+SlotTo = undefined;
+
+// Chest
+ChestOpen = false;
+CurrentChest = noone;
+
+// Store
+StoreOpen = false;
+CurrentStore = noone;
+

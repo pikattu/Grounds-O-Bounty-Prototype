@@ -92,17 +92,21 @@ function InvEndDrag(InvArray, Slot) {
 	return;
 }
 
-function ShowItemDrag() {
+function ShowItemDrag()
+{
+    if (InvFrom != undefined)
+    {
+        if (InvFrom[SlotFrom] != -1)
+        {
+            var Sprite = InvFrom[SlotFrom][0].Sprite;
 
-    if InvFrom != undefined {
-        var Sprite = InvFrom[SlotFrom][0].Sprite;
-
-        draw_sprite(
-            Sprite,
-            0,
-            device_mouse_x_to_gui(0),
-            device_mouse_y_to_gui(0)
-        );
+            draw_sprite(
+                Sprite,
+                0,
+                device_mouse_x_to_gui(0),
+                device_mouse_y_to_gui(0)
+            );
+        }
     }
 
     return;
