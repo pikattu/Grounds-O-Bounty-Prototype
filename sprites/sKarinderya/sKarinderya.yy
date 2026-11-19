@@ -1,19 +1,11 @@
 {
   "$GMSprite":"v2",
   "%Name":"sKarinderya",
-<<<<<<< Updated upstream
-  "bboxMode":0,
-  "bbox_bottom":131,
-  "bbox_left":0,
-  "bbox_right":165,
-  "bbox_top":0,
-=======
   "bboxMode":2,
   "bbox_bottom":122,
   "bbox_left":1,
   "bbox_right":162,
   "bbox_top":58,
->>>>>>> Stashed changes
   "collisionKind":1,
   "collisionTolerance":0,
   "DynamicTexturePage":false,
@@ -31,7 +23,7 @@
   ],
   "name":"sKarinderya",
   "nineSlice":null,
-  "origin":0,
+  "origin":7,
   "parent":{
     "name":"Buildings",
     "path":"folders/Sprites/Look and feel/Exterior/Buildings.yy",
@@ -83,8 +75,8 @@
     ],
     "visibleRange":null,
     "volume":1.0,
-    "xorigin":0,
-    "yorigin":0,
+    "xorigin":83,
+    "yorigin":132,
   },
   "swatchColours":null,
   "swfPrecision":0.5,

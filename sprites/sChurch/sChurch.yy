@@ -1,17 +1,11 @@
 {
   "$GMSprite":"v2",
   "%Name":"sChurch",
-<<<<<<< Updated upstream
-  "bboxMode":0,
-  "bbox_bottom":169,
-  "bbox_left":0,
-=======
   "bboxMode":2,
   "bbox_bottom":159,
   "bbox_left":-1,
->>>>>>> Stashed changes
   "bbox_right":109,
-  "bbox_top":0,
+  "bbox_top":81,
   "collisionKind":1,
   "collisionTolerance":0,
   "DynamicTexturePage":false,
@@ -29,7 +23,7 @@
   ],
   "name":"sChurch",
   "nineSlice":null,
-  "origin":0,
+  "origin":7,
   "parent":{
     "name":"Buildings",
     "path":"folders/Sprites/Look and feel/Exterior/Buildings.yy",
@@ -81,8 +75,8 @@
     ],
     "visibleRange":null,
     "volume":1.0,
-    "xorigin":0,
-    "yorigin":0,
+    "xorigin":55,
+    "yorigin":170,
   },
   "swatchColours":null,
   "swfPrecision":0.5,

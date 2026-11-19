@@ -1,19 +1,11 @@
 {
   "$GMSprite":"v2",
   "%Name":"sTree1",
-<<<<<<< Updated upstream
-  "bboxMode":0,
-  "bbox_bottom":45,
-  "bbox_left":0,
-  "bbox_right":31,
-  "bbox_top":0,
-=======
   "bboxMode":2,
   "bbox_bottom":43,
   "bbox_left":10,
   "bbox_right":22,
   "bbox_top":32,
->>>>>>> Stashed changes
   "collisionKind":1,
   "collisionTolerance":0,
   "DynamicTexturePage":false,
@@ -31,7 +23,7 @@
   ],
   "name":"sTree1",
   "nineSlice":null,
-  "origin":0,
+  "origin":7,
   "parent":{
     "name":"Exterior",
     "path":"folders/Sprites/Look and feel/Exterior.yy",
@@ -83,8 +75,8 @@
     ],
     "visibleRange":null,
     "volume":1.0,
-    "xorigin":0,
-    "yorigin":0,
+    "xorigin":16,
+    "yorigin":46,
   },
   "swatchColours":null,
   "swfPrecision":0.5,
