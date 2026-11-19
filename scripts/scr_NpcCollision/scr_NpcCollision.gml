@@ -15,18 +15,36 @@ function nav_box_blocked(_x, _y) {
     var _mx = (_l + _r) * 0.5;
     var _my = (_t + _b) * 0.5;
 
-    return nav_tile_solid(_l, _t)  || nav_tile_solid(_r, _t)
-        || nav_tile_solid(_l, _b)  || nav_tile_solid(_r, _b)
+    // Check tilemap collision
+    var _tile_blocked =
+        nav_tile_solid(_l, _t)  || nav_tile_solid(_r, _t)
+        || nav_tile_solid(_l, _b) || nav_tile_solid(_r, _b)
         || nav_tile_solid(_mx, _t) || nav_tile_solid(_mx, _b)
         || nav_tile_solid(_l, _my) || nav_tile_solid(_r, _my);
+
+    // Check collision objects
+    var _object_blocked = place_meeting(_x, _y, oCollision);
+
+    return _tile_blocked || _object_blocked;
 }
 
 function nav_line_blocked(_x1, _y1, _x2, _y2) {
     var _steps = max(1, ceil(point_distance(_x1, _y1, _x2, _y2) / 4));
+
     for (var i = 0; i <= _steps; i++) {
         var _f = i / _steps;
-        if (nav_tile_solid(lerp(_x1, _x2, _f), lerp(_y1, _y2, _f))) return true;
+        var _px = lerp(_x1, _x2, _f);
+        var _py = lerp(_y1, _y2, _f);
+
+        // Check tilemap
+        if (nav_tile_solid(_px, _py)) return true;
+
+        // Check collision objects
+        if (collision_point(_px, _py, oCollision, true, true) != noone) {
+            return true;
+        }
     }
+
     return false;
 }
 

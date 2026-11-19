@@ -12,7 +12,10 @@
     "name":"Farming System",
     "path":"folders/Objects/Farming System.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"pDepthFix",
+    "path":"objects/pDepthFix/pDepthFix.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,

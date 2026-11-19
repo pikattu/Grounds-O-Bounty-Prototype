@@ -14,8 +14,8 @@
   "frames":[
     {"$GMSpriteFrame":"v1","%Name":"c33430cd-a416-4927-b0f9-b14804a196d2","name":"c33430cd-a416-4927-b0f9-b14804a196d2","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
-  "gridX":0,
-  "gridY":0,
+  "gridX":16,
+  "gridY":16,
   "height":16,
   "HTile":false,
   "layers":[
@@ -23,7 +23,7 @@
   ],
   "name":"stsCollision",
   "nineSlice":null,
-  "origin":1,
+  "origin":4,
   "parent":{
     "name":"Sprites",
     "path":"folders/Sprites.yy",
@@ -76,7 +76,7 @@
     "visibleRange":null,
     "volume":1.0,
     "xorigin":16,
-    "yorigin":0,
+    "yorigin":8,
   },
   "swatchColours":null,
   "swfPrecision":0.5,
