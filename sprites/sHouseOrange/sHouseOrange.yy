@@ -1,8 +1,18 @@
 {
   "$GMSprite":"v2",
   "%Name":"sHouseOrange",
+<<<<<<< HEAD
   "bboxMode":0,
   "bbox_bottom":91,
+=======
+<<<<<<< Updated upstream
+  "bboxMode":0,
+  "bbox_bottom":91,
+=======
+  "bboxMode":2,
+  "bbox_bottom":80,
+>>>>>>> Stashed changes
+>>>>>>> parent of 2ca2491 (feat(daynight cycle))
   "bbox_left":0,
   "bbox_right":93,
   "bbox_top":0,

@@ -1,8 +1,18 @@
 {
   "$GMSprite":"v2",
   "%Name":"sMayorHouse",
+<<<<<<< HEAD
   "bboxMode":0,
   "bbox_bottom":129,
+=======
+<<<<<<< Updated upstream
+  "bboxMode":0,
+  "bbox_bottom":129,
+=======
+  "bboxMode":2,
+  "bbox_bottom":123,
+>>>>>>> Stashed changes
+>>>>>>> parent of 2ca2491 (feat(daynight cycle))
   "bbox_left":0,
   "bbox_right":81,
   "bbox_top":0,

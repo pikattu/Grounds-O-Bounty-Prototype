@@ -1,11 +1,25 @@
 {
   "$GMSprite":"v2",
   "%Name":"sTree2",
+<<<<<<< HEAD
+=======
+<<<<<<< Updated upstream
+>>>>>>> parent of 2ca2491 (feat(daynight cycle))
   "bboxMode":0,
   "bbox_bottom":45,
   "bbox_left":0,
   "bbox_right":31,
   "bbox_top":0,
+<<<<<<< HEAD
+=======
+=======
+  "bboxMode":2,
+  "bbox_bottom":43,
+  "bbox_left":11,
+  "bbox_right":20,
+  "bbox_top":33,
+>>>>>>> Stashed changes
+>>>>>>> parent of 2ca2491 (feat(daynight cycle))
   "collisionKind":1,
   "collisionTolerance":0,
   "DynamicTexturePage":false,
