@@ -1,11 +1,19 @@
 {
   "$GMSprite":"v2",
   "%Name":"sSchool",
+<<<<<<< Updated upstream
   "bboxMode":0,
   "bbox_bottom":91,
   "bbox_left":0,
   "bbox_right":205,
   "bbox_top":0,
+=======
+  "bboxMode":2,
+  "bbox_bottom":82,
+  "bbox_left":0,
+  "bbox_right":205,
+  "bbox_top":19,
+>>>>>>> Stashed changes
   "collisionKind":1,
   "collisionTolerance":0,
   "DynamicTexturePage":false,

@@ -1,8 +1,13 @@
 {
   "$GMSprite":"v2",
   "%Name":"sMayorHouse",
+<<<<<<< Updated upstream
   "bboxMode":0,
   "bbox_bottom":129,
+=======
+  "bboxMode":2,
+  "bbox_bottom":123,
+>>>>>>> Stashed changes
   "bbox_left":0,
   "bbox_right":81,
   "bbox_top":0,

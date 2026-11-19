@@ -9,7 +9,14 @@
     "name":"Exterior",
     "path":"folders/Objects/Exterior.yy",
   },
+<<<<<<< Updated upstream
   "parentObjectId":null,
+=======
+  "parentObjectId":{
+    "name":"oCollision",
+    "path":"objects/oCollision/oCollision.yy",
+  },
+>>>>>>> Stashed changes
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
