@@ -1,6 +1,9 @@
 draw_self();
 
+draw_text(x, y - 20, "Tick: " + string(Tick));
+
 if (Crop != undefined) {
+    draw_text(x, y - 35, "PLANTED");
 
     var Sprite = Crop.Sprite;
     var SubImage = 0;
@@ -16,4 +19,6 @@ if (Crop != undefined) {
 
     draw_sprite_ext(Sprite, SubImage, x, y, 1, 1, 0, c_white, 1);
 
+} else {
+    draw_text(x, y - 35, "EMPTY");
 }

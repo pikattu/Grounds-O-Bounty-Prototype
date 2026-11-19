@@ -1,15 +1,9 @@
 {
   "$GMSprite":"v2",
   "%Name":"sChurch",
-<<<<<<< Updated upstream
   "bboxMode":0,
   "bbox_bottom":169,
   "bbox_left":0,
-=======
-  "bboxMode":2,
-  "bbox_bottom":159,
-  "bbox_left":-1,
->>>>>>> Stashed changes
   "bbox_right":109,
   "bbox_top":0,
   "collisionKind":1,

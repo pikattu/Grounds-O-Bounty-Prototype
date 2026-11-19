@@ -8,7 +8,7 @@ TBY = 150;
 //txt variables
 
 Page = 0;
-Text = ["hello"];
+Text = ["cand", "deez", "nuts", "fit", "in", "ur"];
 String = "";
 CurrentChar = 1;
 TextSpeed = 1;

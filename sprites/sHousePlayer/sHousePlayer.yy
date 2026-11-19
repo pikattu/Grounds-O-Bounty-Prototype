@@ -1,19 +1,11 @@
 {
   "$GMSprite":"v2",
   "%Name":"sHousePlayer",
-<<<<<<< Updated upstream
   "bboxMode":0,
   "bbox_bottom":91,
   "bbox_left":0,
   "bbox_right":93,
   "bbox_top":0,
-=======
-  "bboxMode":2,
-  "bbox_bottom":82,
-  "bbox_left":0,
-  "bbox_right":92,
-  "bbox_top":26,
->>>>>>> Stashed changes
   "collisionKind":1,
   "collisionTolerance":0,
   "DynamicTexturePage":false,

@@ -1,13 +1,8 @@
 {
   "$GMSprite":"v2",
   "%Name":"sHouseOrange",
-<<<<<<< Updated upstream
   "bboxMode":0,
   "bbox_bottom":91,
-=======
-  "bboxMode":2,
-  "bbox_bottom":80,
->>>>>>> Stashed changes
   "bbox_left":0,
   "bbox_right":93,
   "bbox_top":0,
