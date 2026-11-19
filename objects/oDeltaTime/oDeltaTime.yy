@@ -9,8 +9,8 @@
   "name":"oDeltaTime",
   "overriddenProperties":[],
   "parent":{
-    "name":"Miscallaneusue",
-    "path":"folders/Objects/Miscallaneusue.yy",
+    "name":"Objects",
+    "path":"folders/Objects.yy",
   },
   "parentObjectId":null,
   "persistent":false,

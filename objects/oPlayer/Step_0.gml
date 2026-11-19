@@ -22,9 +22,9 @@ move_and_collide((hVel/Mag)*global.DT, (vVel/Mag)*global.DT, oCollision)
 
 
 // Animations
-
+<<<<<<< Updated upstream
 PlayerAnimations(hVel,vVel);
-
+=======
 PlayerAnimations(hVel, vVel);
 
 // Get Collision Tilemap
@@ -71,3 +71,4 @@ if (vVel != 0) {
 
 // Depth
 depth = -y;
+>>>>>>> Stashed changes

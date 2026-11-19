@@ -1,11 +1,19 @@
 {
   "$GMSprite":"v2",
   "%Name":"sKubo",
+<<<<<<< Updated upstream
+  "bboxMode":0,
+  "bbox_bottom":90,
+  "bbox_left":0,
+  "bbox_right":114,
+  "bbox_top":0,
+=======
   "bboxMode":2,
   "bbox_bottom":82,
   "bbox_left":12,
   "bbox_right":103,
   "bbox_top":28,
+>>>>>>> Stashed changes
   "collisionKind":1,
   "collisionTolerance":0,
   "DynamicTexturePage":false,
@@ -23,7 +31,7 @@
   ],
   "name":"sKubo",
   "nineSlice":null,
-  "origin":7,
+  "origin":0,
   "parent":{
     "name":"Buildings",
     "path":"folders/Sprites/Look and feel/Exterior/Buildings.yy",
@@ -75,8 +83,8 @@
     ],
     "visibleRange":null,
     "volume":1.0,
-    "xorigin":57,
-    "yorigin":91,
+    "xorigin":0,
+    "yorigin":0,
   },
   "swatchColours":null,
   "swfPrecision":0.5,

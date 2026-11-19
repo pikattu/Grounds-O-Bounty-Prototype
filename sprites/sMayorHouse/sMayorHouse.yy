@@ -1,11 +1,16 @@
 {
   "$GMSprite":"v2",
   "%Name":"sMayorHouse",
+<<<<<<< Updated upstream
+  "bboxMode":0,
+  "bbox_bottom":129,
+=======
   "bboxMode":2,
   "bbox_bottom":123,
+>>>>>>> Stashed changes
   "bbox_left":0,
   "bbox_right":81,
-  "bbox_top":47,
+  "bbox_top":0,
   "collisionKind":1,
   "collisionTolerance":0,
   "DynamicTexturePage":false,
@@ -23,7 +28,7 @@
   ],
   "name":"sMayorHouse",
   "nineSlice":null,
-  "origin":7,
+  "origin":0,
   "parent":{
     "name":"Buildings",
     "path":"folders/Sprites/Look and feel/Exterior/Buildings.yy",
@@ -75,8 +80,8 @@
     ],
     "visibleRange":null,
     "volume":1.0,
-    "xorigin":41,
-    "yorigin":130,
+    "xorigin":0,
+    "yorigin":0,
   },
   "swatchColours":null,
   "swfPrecision":0.5,

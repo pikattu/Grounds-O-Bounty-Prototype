@@ -1,11 +1,19 @@
 {
   "$GMSprite":"v2",
   "%Name":"sStore",
+<<<<<<< Updated upstream
+  "bboxMode":0,
+  "bbox_bottom":112,
+  "bbox_left":1,
+  "bbox_right":95,
+  "bbox_top":0,
+=======
   "bboxMode":2,
   "bbox_bottom":102,
   "bbox_left":0,
   "bbox_right":93,
   "bbox_top":46,
+>>>>>>> Stashed changes
   "collisionKind":1,
   "collisionTolerance":0,
   "DynamicTexturePage":false,
@@ -16,14 +24,14 @@
   ],
   "gridX":0,
   "gridY":0,
-  "height":113,
+  "height":114,
   "HTile":false,
   "layers":[
     {"$GMImageLayer":"","%Name":"c6894b56-7848-473d-b4dd-9cb930ff74e0","blendMode":0,"displayName":"Layer 2","isLocked":false,"name":"c6894b56-7848-473d-b4dd-9cb930ff74e0","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
   "name":"sStore",
   "nineSlice":null,
-  "origin":7,
+  "origin":0,
   "parent":{
     "name":"Buildings",
     "path":"folders/Sprites/Look and feel/Exterior/Buildings.yy",
@@ -75,8 +83,8 @@
     ],
     "visibleRange":null,
     "volume":1.0,
-    "xorigin":48,
-    "yorigin":113,
+    "xorigin":0,
+    "yorigin":0,
   },
   "swatchColours":null,
   "swfPrecision":0.5,
@@ -86,5 +94,5 @@
   },
   "type":0,
   "VTile":false,
-  "width":96,
+  "width":100,
 }
