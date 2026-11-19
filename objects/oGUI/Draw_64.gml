@@ -83,8 +83,8 @@ if (InvOpen)
 	{
 	    draw_sprite_stretched(
 	        sGUIBG, 0,
-	        PlayerX - 14, PlayerY - 14,
-	        112, 112
+	        PlayerX - 14, PlayerY - 35,
+	        112, 137
 	    );
 	}
 
@@ -113,32 +113,13 @@ if (InvOpen)
 	draw_set_valign(fa_top);
 	draw_set_color(c_white);
 	
+
 	// ==========================================
-	// STORE GUI
+	// STORE ITEMS
 	// ==========================================
 
 	if (StoreOpen && instance_exists(CurrentStore))
 	{
-	    // Store background
-	    draw_sprite_stretched(
-	        sGUIBG, 0,
-	        StoreX - 14, StoreY - 35,
-	        112, 137
-	    );
-
-	    // Store title
-	    draw_set_font(global.FontDialogue);
-	    draw_set_color(c_black);
-	    draw_set_halign(fa_center);
-	    draw_set_valign(fa_middle);
-
-	    draw_text(StoreX + 42, StoreY - 24, "SARI-SARI STORE");
-
-	    draw_set_halign(fa_left);
-	    draw_set_valign(fa_top);
-	    draw_set_color(c_white);
-
-	    // Draw store items
 	    var Items = CurrentStore.StoreItems;
 
 	    for (var i = 0; i < array_length(Items); i++)
@@ -146,44 +127,69 @@ if (InvOpen)
 	        var xx = StoreX + (i mod InvWidth) * 21;
 	        var yy = StoreY + (i div InvWidth) * 21;
 
-	        // Slot
-	        draw_sprite(sInventorySlot, 0, xx, yy);
-
-	        // Item sprite
 	        var Item = Items[i][0];
 	        var Price = Items[i][1];
 
+	        // Draw slot
+	        draw_sprite(sInventorySlot, 0, xx, yy);
+
+	        // Draw item
 	        draw_sprite(Item.Sprite, 0, xx, yy);
 
-	        // Hover detection
-	       if (point_in_rectangle(MouseX, MouseY, xx-9, yy-9, xx+9, yy+9))
-			{
-			    draw_sprite(sSlotSelect, 0, xx, yy);
+	        // Mouse hover
+	        var Hover = point_in_rectangle(
+	            MouseX, MouseY,
+	            xx - 9, yy - 9,
+	            xx + 9, yy + 9
+	        );
 
-			    if (mouse_check_button_pressed(mb_left) && !StoreOpen)
-			    {
-			        InvStartDrag(Inv, i);
-			    }
+	        if (Hover)
+	        {
+	            draw_sprite(sSlotSelect, 0, xx, yy);
 
-			    if (mouse_check_button_released(mb_left) && !StoreOpen)
-			    {
-			        InvEndDrag(Inv, i);
-			    }
-			}
+	            if (mouse_check_button_pressed(mb_left))
+	            {
+	                if (global.Coins >= Price)
+	                {
+	                    if (InventoryHasRoom(Inv, Item))
+	                    {
+	                        InventoryAdd(Inv, Item, 1);
+	                        global.Coins -= Price;
 
-	        // Item price
+	                        show_debug_message("Purchased: " + string(Item.Name));
+	                    }
+	                    else
+	                    {
+	                        show_debug_message("Inventory full!");
+	                    }
+	                }
+	                else
+	                {
+	                    show_debug_message("Not enough coins!");
+	                }
+	            }
+	        }
+
+	        // Price
 	        draw_set_color(c_black);
 	        draw_set_halign(fa_center);
-	        draw_text_transformed(xx, yy + 8, string(Price), 0.5, 0.5, 0);
+	        draw_text_transformed(
+	            xx, yy + 8,
+	            string(Price),
+	            0.5, 0.5, 0
+	        );
 
 	        draw_set_halign(fa_left);
 	        draw_set_color(c_white);
 	    }
 
-	    // Player coins
-	    draw_set_font(global.FontDialogue);
+	    // Coins
 	    draw_set_color(c_black);
-	    draw_text(StoreX - 5, StoreY + 91, "Coins: " + string(global.Coins));
+	    draw_text(
+	        StoreX - 5,
+	        StoreY + 91,
+	        "Coins: " + string(global.Coins)
+	    );
 
 	    draw_set_color(c_white);
 	}
@@ -226,19 +232,20 @@ if (InvOpen)
 
         // Hover
         if (point_in_rectangle(MouseX, MouseY, xx-9, yy-9, xx+9, yy+9))
-        {
-            draw_sprite(sSlotSelect, 0, xx, yy);
+		{
+		    draw_sprite(sSlotSelect, 0, xx, yy);
 
-            if (mouse_check_button_pressed(mb_left))
-            {
-                InvStartDrag(Inv, i);
-            }
+		    if (mouse_check_button_pressed(mb_left) && !StoreOpen)
+		    {
+		        InvStartDrag(Inv, i);
+		    }
 
-            if (mouse_check_button_released(mb_left))
-            {
-                InvEndDrag(Inv, i);
-            }
-        }
+		    if (mouse_check_button_released(mb_left) && !StoreOpen)
+		    {
+		        InvEndDrag(Inv, i);
+		    }
+		}
+ 
     }
 
 
@@ -305,14 +312,23 @@ if (InvOpen)
 
 }
 else
-{
+{	
+	// ==========================================
+	// HOTBAR BACKGROUND
+	// ==========================================
+
+	draw_sprite_stretched(
+	    sGUIBG, 0,
+	    xDiff - 55, yDiff + 104,
+	    108, 26
+	);
     // ==========================================
     // HOTBAR
     // ==========================================
 
     for (var i = 0; i < InvWidth; i++)
     {
-        var xx = xDiff - 30 + i * 21;
+        var xx = xDiff - 43 + i * 21;
         var yy = yDiff + 117;
 
         draw_sprite(sInventorySlot, 0, xx, yy);

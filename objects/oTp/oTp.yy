@@ -38,5 +38,5 @@
     "path":"sprites/sTeleport/sTeleport.yy",
   },
   "spriteMaskId":null,
-  "visible":true,
+  "visible":false,
 }
