@@ -1,54 +1,70 @@
-// ==========================================
-// LIGHTING SURFACE
-// ==========================================
 
-if (!surface_exists(LightingSurface)) {
-    LightingSurface = surface_create(room_width, room_height);
-}
+/// oDayNightCycle - Step Event
 
 // ==========================================
-// DAY COUNTER
-// ==========================================
-
 // UPDATE TIME
-Time += global.DT;
-
-// DAY COUNTER
-var _currentCycle = floor((Time * DayNightSpeed + pi) / (2 * pi));
-
-if (_currentCycle > DayCycle) {
-    global.Day += _currentCycle - DayCycle;
-    DayCycle = _currentCycle;
-}
-
-// DAY/NIGHT
-TimeOfDay = sin(Time * DayNightSpeed);
-TimeOfDay = clamp(TimeOfDay, 0, 0.8);
-
-// TORCH
-if (TimeOfDay > 0.3) {
-    with (oTorch) {
-        sprite_index = sTorchOn;
-    }
-}
-else {
-    with (oTorch) {
-        sprite_index = sTorchOff;
-    }
-}
-
-
-// ==========================================
-// TORCH SPRITE SWITCH
 // ==========================================
 
-if (TimeOfDay > 0.3) {
-    with (oTorch) {
-        sprite_index = sTorchOn;
-    }
+var _deltaSeconds = delta_time / 1000000;
+
+global.Time += _deltaSeconds * TimeScale;
+
+// ==========================================
+// DAY TRANSITION
+// ==========================================
+
+while (global.Time >= 86400) {
+    global.Time -= 86400;
+    global.Day += 1;
 }
-else {
-    with (oTorch) {
-        sprite_index = sTorchOff;
-    }
+
+global.TimeOfDay = global.Time / 86400;
+
+var _hour = global.Time / 3600;
+
+// ==========================================
+// CALCULATE DARKNESS
+// ==========================================
+
+var _darkness = 0;
+
+// Full night: 6 PM to 4 AM
+if (_hour >= SunsetHour || _hour < SunriseHour - TransitionHours) {
+    _darkness = 0.75;
+}
+
+// Sunrise: 4 AM to 6 AM
+else if (_hour < SunriseHour) {
+    var _progress = (_hour - (SunriseHour - TransitionHours)) / TransitionHours;
+    _darkness = lerp(0.75, 0, _progress);
+}
+
+// Sunset: 4 PM to 6 PM
+else if (_hour >= SunsetHour - TransitionHours) {
+    var _progress = (_hour - (SunsetHour - TransitionHours)) / TransitionHours;
+    _darkness = lerp(0, 0.75, _progress);
+}
+
+Darkness = clamp(_darkness, 0, 0.75);
+
+// ==========================================
+// LIGHTING COLORS
+// ==========================================
+
+R = lerp(DayColor[0], NightColor[0], Darkness);
+G = lerp(DayColor[1], NightColor[1], Darkness);
+B = lerp(DayColor[2], NightColor[2], Darkness);
+
+// ==========================================
+// TORCH ACTIVATION
+// ==========================================
+
+global.TorchOn = (_hour >= SunsetHour || _hour < SunriseHour - TransitionHours);
+
+// ==========================================
+// UPDATE TORCH SPRITES
+// ==========================================
+
+with (oTorch) {
+    sprite_index = global.TorchOn ? sTorchOn : sTorchOff;
 }

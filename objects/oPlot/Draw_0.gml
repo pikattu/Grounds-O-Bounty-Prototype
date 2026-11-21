@@ -1,19 +1,35 @@
+
+/// oPlot - Draw Event
+
+// Draw soil / plot sprite
 draw_self();
+
+// ==========================================
+// DRAW CROP
+// ==========================================
 
 if (Crop != undefined) {
 
-    var Sprite = Crop.Sprite;
-    var SubImage = 0;
+    var _sprite = Crop.Sprite;
 
-    var TotalTime = Crop.GrowTime;
-    var StageTime = TotalTime / 5;
+    if (sprite_exists(_sprite)) {
 
-    if (Tick >= 0 && Tick < StageTime) SubImage = 0;
-    else if (Tick >= StageTime && Tick < StageTime * 2) SubImage = 1;
-    else if (Tick >= StageTime * 2 && Tick < StageTime * 3) SubImage = 2;
-    else if (Tick >= StageTime * 3 && Tick < StageTime * 4) SubImage = 3;
-    else if (Tick >= StageTime * 4) SubImage = 4;
+        var _subImage = clamp(
+            Stage,
+            0,
+            sprite_get_number(_sprite) - 1
+        );
 
-    draw_sprite_ext(Sprite, SubImage, x, y, 1, 1, 0, c_white, 1);
-
+        draw_sprite_ext(
+            _sprite,
+            _subImage,
+            x,
+            y,
+            1,
+            1,
+            0,
+            c_white,
+            1
+        );
+    }
 }

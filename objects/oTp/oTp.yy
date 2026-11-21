@@ -28,7 +28,7 @@
   "physicsStartAwake":true,
   "properties":[
     {"$GMObjectProperty":"v2","%Name":"tpID","filters":[],"listItems":[],"multiselect":false,"name":"tpID","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0.0","varType":0,},
-    {"$GMObjectProperty":"v2","%Name":"roomTo","filters":[],"listItems":[],"multiselect":false,"name":"roomTo","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resource":{"name":"rVillage","path":"rooms/rVillage/rVillage.yy",},"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"rVillage","varType":5,},
+    {"$GMObjectProperty":"v2","%Name":"roomTo","filters":[],"listItems":[],"multiselect":false,"name":"roomTo","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resource":{"name":"rmVillage","path":"rooms/rmVillage/rmVillage.yy",},"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"rmVillage","varType":5,},
   ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",

@@ -1,14 +1,14 @@
 {
   "$GMRoom":"v1",
-  "%Name":"rMenuScreen",
+  "%Name":"rmGame",
   "creationCodeFile":"",
   "inheritCode":false,
   "inheritCreationOrder":false,
   "inheritLayers":false,
   "instanceCreationOrder":[
-    {"name":"inst_3192B149","path":"rooms/rMenuScreen/rMenuScreen.yy",},
-    {"name":"inst_272AD45A","path":"rooms/rMenuScreen/rMenuScreen.yy",},
-    {"name":"inst_6F8762","path":"rooms/rMenuScreen/rMenuScreen.yy",},
+    {"name":"inst_3192B149","path":"rooms/rmGame/rmGame.yy",},
+    {"name":"inst_272AD45A","path":"rooms/rmGame/rmGame.yy",},
+    {"name":"inst_6F8762","path":"rooms/rmGame/rmGame.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -22,7 +22,7 @@
       ],"depth":100,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"aMenuUI","properties":[],"resourceType":"GMRAssetLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRBackgroundLayer":"","%Name":"Background","animationFPS":30.0,"animationSpeedType":0,"colour":4294967295,"depth":200,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"hspeed":0.0,"htiled":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Background","properties":[],"resourceType":"GMRBackgroundLayer","resourceVersion":"2.0","spriteId":{"name":"sMenuScreen","path":"sprites/sMenuScreen/sMenuScreen.yy",},"stretch":false,"userdefinedAnimFPS":false,"userdefinedDepth":false,"visible":true,"vspeed":0.0,"vtiled":false,"x":0,"y":0,},
   ],
-  "name":"rMenuScreen",
+  "name":"rmGame",
   "parent":{
     "name":"Rooms",
     "path":"folders/Rooms.yy",
@@ -55,7 +55,7 @@
     {"hborder":32,"hport":768,"hspeed":-1,"hview":768,"inherit":false,"objectId":null,"vborder":32,"visible":false,"vspeed":-1,"wport":1366,"wview":1366,"xport":0,"xview":0,"yport":0,"yview":0,},
   ],
   "viewSettings":{
-    "clearDisplayBuffer":true,
+    "clearDisplayBuffer":false,
     "clearViewBackground":false,
     "enableViews":true,
     "inheritViewSettings":false,

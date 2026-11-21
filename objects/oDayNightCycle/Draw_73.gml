@@ -1,18 +1,18 @@
+
+/// oDayNightCycle - Draw End Event
+
 // ==========================================
-// LIGHTING SURFACE
+// CREATE / RECREATE LIGHTING SURFACE
 // ==========================================
 
-// Check if surface needs to be recreated
 if (!surface_exists(LightingSurface)
 || surface_get_width(LightingSurface) != room_width
-|| surface_get_height(LightingSurface) != room_height) {
-
-    // Free previous surface
+|| surface_get_height(LightingSurface) != room_height)
+{
     if (surface_exists(LightingSurface)) {
         surface_free(LightingSurface);
     }
 
-    // Create surface matching current room
     LightingSurface = surface_create(room_width, room_height);
 }
 
@@ -26,34 +26,38 @@ if (surface_exists(LightingSurface)) {
 
     gpu_set_blendmode(bm_normal);
 
-    // Draw night darkness
-    draw_clear_alpha(c_black, TimeOfDay);
+    // Dark overlay
+    draw_clear_alpha(c_black, Darkness);
 
     // ==========================================
-    // TORCH LIGHTING EFFECT
+    // TORCH LIGHTING
     // ==========================================
 
-    if (TimeOfDay > 0.3) {
+    if (global.TorchOn) {
 
         with (oTorch) {
 
             var _sizeOffset = random_range(-0.01, 0.01);
 
+            var _lightSize = 0.3 + _sizeOffset;
+
+            // Remove darkness around torch
             gpu_set_blendmode(bm_subtract);
 
             draw_sprite_ext(
                 sLightCutout, 0,
                 x, y - 16,
-                0.3 + _sizeOffset, 0.3 + _sizeOffset,
+                _lightSize, _lightSize,
                 0, c_white, 1
             );
 
+            // Warm torch glow
             gpu_set_blendmode(bm_add);
 
             draw_sprite_ext(
                 sLightCutout, 0,
                 x, y - 16,
-                0.3 + _sizeOffset, 0.3 + _sizeOffset,
+                _lightSize, _lightSize,
                 0, c_red, 0.5
             );
 
@@ -63,6 +67,11 @@ if (surface_exists(LightingSurface)) {
 
     surface_reset_target();
 
-    // Display lighting
+    // ==========================================
+    // DISPLAY LIGHTING
+    // ==========================================
+
+    gpu_set_blendmode(bm_normal);
+
     draw_surface(LightingSurface, 0, 0);
 }
