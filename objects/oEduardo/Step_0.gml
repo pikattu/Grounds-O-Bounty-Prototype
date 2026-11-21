@@ -1,1 +1,1 @@
-event_inherited()
+npc_nav_step();

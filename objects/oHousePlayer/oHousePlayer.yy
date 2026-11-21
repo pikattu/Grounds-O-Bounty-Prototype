@@ -1,9 +1,7 @@
 {
   "$GMObject":"",
   "%Name":"oHousePlayer",
-  "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-  ],
+  "eventList":[],
   "managed":true,
   "name":"oHousePlayer",
   "overriddenProperties":[],
@@ -11,10 +9,7 @@
     "name":"Exterior",
     "path":"folders/Objects/Exterior.yy",
   },
-  "parentObjectId":{
-    "name":"pDepthFix",
-    "path":"objects/pDepthFix/pDepthFix.yy",
-  },
+  "parentObjectId":null,
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,

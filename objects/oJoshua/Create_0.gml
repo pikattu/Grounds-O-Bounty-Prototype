@@ -1,5 +1,3 @@
-event_inherited()
-
 role = "joshua";
 move_speed = 2.5;
 

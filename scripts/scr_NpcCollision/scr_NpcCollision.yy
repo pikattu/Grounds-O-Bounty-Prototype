@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"scr_NpcCollision",
   "parent":{
-    "name":"Scripts",
-    "path":"folders/Scripts.yy",
+    "name":"GroundsOBounty",
+    "path":"GroundsOBounty.yyp",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

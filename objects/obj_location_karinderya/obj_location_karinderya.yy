@@ -33,8 +33,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sLocation",
-    "path":"sprites/sLocation/sLocation.yy",
+    "name":"spr_Location_",
+    "path":"sprites/spr_Location_/spr_Location_.yy",
   },
   "spriteMaskId":null,
   "visible":true,
