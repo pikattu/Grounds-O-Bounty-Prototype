@@ -37,7 +37,7 @@ global.CropTick = 0;
 // GO TO GAME
 // ==========================================
 
-room_goto(rmGame);
+room_goto(rmVillage);
 
 
 

@@ -36,7 +36,6 @@
     {"name":"inst_55C2C864","path":"rooms/rmPlayerFarm/rmPlayerFarm.yy",},
     {"name":"inst_94C00FE","path":"rooms/rmPlayerFarm/rmPlayerFarm.yy",},
     {"name":"inst_64F3DC73","path":"rooms/rmPlayerFarm/rmPlayerFarm.yy",},
-    {"name":"inst_8BE2EEC","path":"rooms/rmPlayerFarm/rmPlayerFarm.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -46,9 +45,7 @@
     {"$GMREffectLayer":"","%Name":"Colorize","depth":100,"effectEnabled":true,"effectType":"_filter_greyscale","gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":true,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":false,"layers":[],"name":"Colorize","properties":[
         {"name":"g_Intensity","type":0,"value":"0.25",},
       ],"resourceType":"GMREffectLayer","resourceVersion":"2.0","userdefinedDepth":true,"visible":true,},
-    {"$GMRInstanceLayer":"","%Name":"Player","depth":181,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
-        {"$GMRInstance":"v4","%Name":"inst_8BE2EEC","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_8BE2EEC","objectId":{"name":"oPlayer","path":"objects/oPlayer/oPlayer.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":640.0,"y":160.0,},
-      ],"layers":[],"name":"Player","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
+    {"$GMRInstanceLayer":"","%Name":"Player","depth":181,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[],"layers":[],"name":"Player","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRTileLayer":"","%Name":"tCollision","depth":181,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"tCollision","properties":[],"resourceType":"GMRTileLayer","resourceVersion":"2.0","tiles":{"SerialiseHeight":38,"SerialiseWidth":57,"TileCompressedData":[
           -34,-2147483648,-16,1,-41,-2147483648,-17,1,-8,-2147483648,-15,1,-15,-2147483648,-3,1,-15,-2147483648,
           -3,1,-6,-2147483648,-15,1,-15,-2147483648,-3,1,-15,-2147483648,-7,1,-2,-2147483648,1,1,-13,-2147483648,
