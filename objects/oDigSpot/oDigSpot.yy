@@ -10,8 +10,8 @@
   "name":"oDigSpot",
   "overriddenProperties":[],
   "parent":{
-    "name":"GroundsOBounty",
-    "path":"GroundsOBounty.yyp",
+    "name":"Miscallaneusue",
+    "path":"folders/Objects/Miscallaneusue.yy",
   },
   "parentObjectId":null,
   "persistent":false,

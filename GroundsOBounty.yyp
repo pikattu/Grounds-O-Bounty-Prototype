@@ -144,6 +144,7 @@
     {"id":{"name":"scr_NewGame","path":"scripts/scr_NewGame/scr_NewGame.yy",},},
     {"id":{"name":"scr_NpcCollision","path":"scripts/scr_NpcCollision/scr_NpcCollision.yy",},},
     {"id":{"name":"scr_NpcPathing","path":"scripts/scr_NpcPathing/scr_NpcPathing.yy",},},
+    {"id":{"name":"scr_SaveGame","path":"scripts/scr_SaveGame/scr_SaveGame.yy",},},
     {"id":{"name":"Banana_Tree","path":"sprites/Banana_Tree/Banana_Tree.yy",},},
     {"id":{"name":"Base_houses","path":"sprites/Base_houses/Base_houses.yy",},},
     {"id":{"name":"Coconut_tree","path":"sprites/Coconut_tree/Coconut_tree.yy",},},
