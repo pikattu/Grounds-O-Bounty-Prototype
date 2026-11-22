@@ -156,7 +156,7 @@ function antique_give_item(_a) {
 }
 
 function antique_can_dig() {
-    return true;
+    return !dialogue_is_active();
 }
 
 function antique_sprite(_a) {

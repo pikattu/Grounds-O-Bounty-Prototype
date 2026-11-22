@@ -1,4 +1,4 @@
-
+if (dialogue_is_active()) exit;
 // Input
 var kLeft  = keyboard_check(ord("A"));
 var kRight = keyboard_check(ord("D"));

@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scr_Dialogue",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_Dialogue",
+  "parent":{
+    "name":"GroundsOBounty",
+    "path":"GroundsOBounty.yyp",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}
