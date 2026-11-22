@@ -24,3 +24,6 @@ has_save = file_exists(save_file);
 
 // Hover tracking
 hovered_button = "";
+
+show_debug_message("button_x:" + string(button_x) + " new_y:" + string(newgame_y)
+    + " | gui:" + string(display_get_gui_width()) + "x" + string(display_get_gui_height()));
