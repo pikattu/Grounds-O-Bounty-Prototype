@@ -1,7 +1,9 @@
+
 #macro DIALOGUE_KEY               ord("E")
 #macro DIALOGUE_RANGE             28
 #macro DIALOGUE_BOX_SPRITE        sTextBox
-#macro DIALOGUE_BLOCK_ON_TEXTBOX  true
+#macro DIALOGUE_BLOCK_ON_TEXTBOX  false
+
 
 function dialogue_is_active() {
     return variable_global_exists("dialogue_active") && global.dialogue_active;
@@ -69,6 +71,7 @@ function dialogue_create() {
 }
 
 function dialogue_step() {
+	if (!variable_instance_exists(id, "lines")) dialogue_create();
     var _box = DIALOGUE_BLOCK_ON_TEXTBOX && instance_exists(oTextBox);
     var _was_box = had_box;
     had_box = _box;
@@ -137,6 +140,7 @@ function dialogue_step() {
 }
 
 function dialogue_draw_gui() {
+	if (!variable_instance_exists(id, "lines")) dialogue_create();
     var _gw = display_get_gui_width();
     var _gh = display_get_gui_height();
 
@@ -157,46 +161,48 @@ function dialogue_draw_gui() {
 
     if (active) {
         var _spr = DIALOGUE_BOX_SPRITE;
-        var _w = sprite_get_width(_spr);
-        var _h = sprite_get_height(_spr);
-        var _s = min(1, (_gw - 16) / _w);
-        var _bw = _w * _s;
-        var _bh = _h * _s;
+        var _bw = _gw * 0.8;
+        var _bh = _gh * 0.25;
         var _bx = (_gw - _bw) / 2;
-        var _by = _gh - _bh - 8;
+        var _by = _gh - _bh - _gh * 0.03;
 
-        draw_sprite_ext(_spr, 0,
-            _bx + sprite_get_xoffset(_spr) * _s,
-            _by + sprite_get_yoffset(_spr) * _s,
-            _s, _s, 0, c_white, 1);
+        if (floor(chars) == 1) {
+            show_debug_message("dlg box: gui " + string(_gw) + "x" + string(_gh)
+                + " | sprite " + string(sprite_get_width(_spr)) + "x" + string(sprite_get_height(_spr)));
+        }
 
-        var _pad = 12 * _s;
+        draw_set_alpha(0.9);
+        draw_set_color(make_color_rgb(60, 40, 25));
+        draw_rectangle(_bx, _by, _bx + _bw, _by + _bh, false);
+        draw_set_alpha(1);
+
+        if (sprite_exists(_spr)) draw_sprite_stretched(_spr, 0, _bx, _by, _bw, _bh);
+
+        var _pad = _bw * 0.04;
+        var _lh = string_height("A") * text_scale;
         var _role = variable_instance_exists(npc, "role") ? npc.role : "";
         var _name = dialogue_display_name(_role);
         var _shown = string_copy(lines[line_i], 1, floor(chars));
         var _tw = (_bw - _pad * 2) / text_scale;
+        var _ny = _by + _pad * 0.6;
+        var _ty = _ny + _lh + 6;
 
         draw_set_halign(fa_left);
         draw_set_valign(fa_top);
 
         draw_set_color(c_black);
-        draw_text_transformed(_bx + _pad + 1, _by + _pad * 0.5 + 1, _name, text_scale, text_scale, 0);
-        draw_text_ext_transformed(_bx + _pad + 1, _by + _pad * 0.5 + 13 * text_scale + 1, _shown, -1, _tw, text_scale, text_scale, 0);
+        draw_text_transformed(_bx + _pad + 1, _ny + 1, _name, text_scale, text_scale, 0);
+        draw_text_ext_transformed(_bx + _pad + 1, _ty + 1, _shown, -1, _tw, text_scale, text_scale, 0);
 
         draw_set_color(c_yellow);
-        draw_text_transformed(_bx + _pad, _by + _pad * 0.5, _name, text_scale, text_scale, 0);
+        draw_text_transformed(_bx + _pad, _ny, _name, text_scale, text_scale, 0);
         draw_set_color(c_white);
-        draw_text_ext_transformed(_bx + _pad, _by + _pad * 0.5 + 13 * text_scale, _shown, -1, _tw, text_scale, text_scale, 0);
+        draw_text_ext_transformed(_bx + _pad, _ty, _shown, -1, _tw, text_scale, text_scale, 0);
 
         if (chars >= string_length(lines[line_i]) && ((current_time div 400) mod 2 == 0)) {
             draw_set_halign(fa_right);
             draw_set_valign(fa_bottom);
-            draw_text_transformed(_bx + _bw - _pad, _by + _bh - _pad * 0.5, ">", text_scale, text_scale, 0);
+            draw_text_transformed(_bx + _bw - _pad, _by + _bh - _pad * 0.4, ">", text_scale, text_scale, 0);
         }
     }
-
-    draw_set_color(c_white);
-    draw_set_halign(fa_left);
-    draw_set_valign(fa_top);
-    draw_set_font(-1);
 }
