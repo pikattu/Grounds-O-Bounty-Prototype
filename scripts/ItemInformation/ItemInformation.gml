@@ -9,7 +9,7 @@ function ItemInformation()
     global.ItemStrawberry =
     {
         Name: "Strawberry",
-        Sprite: sStrawberr,
+        Sprite: sStrawberrySeeds,
         ItemType: "Crop"
     };
 	global.ItemRice =

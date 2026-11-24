@@ -2,7 +2,7 @@
   "$GMSprite":"v2",
   "%Name":"sInterior",
   "bboxMode":0,
-  "bbox_bottom":1210,
+  "bbox_bottom":1493,
   "bbox_left":16,
   "bbox_right":983,
   "bbox_top":17,

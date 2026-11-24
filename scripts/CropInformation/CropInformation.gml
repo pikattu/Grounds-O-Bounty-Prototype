@@ -22,9 +22,9 @@ function CropInformation(){
 	
 	global.CropStrawberry = 
 	{
-		Sprite: sStrawberryPlant,
+		Sprite: sPlantStrawberry,
 		GrowTime: 100,
-		Drop: [global.ItemStrawberry, 5]
+		Drop: [global.ItemStrawberry, 3]
 	}
 	
 }

@@ -1,6 +1,6 @@
 {
   "$GMSprite":"v2",
-  "%Name":"sPlantStrawberry_1",
+  "%Name":"sPlantStrawberry",
   "bboxMode":0,
   "bbox_bottom":15,
   "bbox_left":2,
@@ -16,7 +16,6 @@
     {"$GMSpriteFrame":"v1","%Name":"c0f79746-4ed1-4017-9be6-2be3ec0280b0","name":"c0f79746-4ed1-4017-9be6-2be3ec0280b0","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
     {"$GMSpriteFrame":"v1","%Name":"7c67f245-1f32-4306-9de4-c5cb7be67fd9","name":"7c67f245-1f32-4306-9de4-c5cb7be67fd9","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
     {"$GMSpriteFrame":"v1","%Name":"5e0e3b35-26cc-40de-ad1f-8952ccad2b84","name":"5e0e3b35-26cc-40de-ad1f-8952ccad2b84","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"v1","%Name":"517cc9bc-be5a-4529-a18b-0563020ba787","name":"517cc9bc-be5a-4529-a18b-0563020ba787","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
     {"$GMSpriteFrame":"v1","%Name":"3011c646-d309-46d7-839e-b3ff26758d57","name":"3011c646-d309-46d7-839e-b3ff26758d57","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
@@ -26,12 +25,12 @@
   "layers":[
     {"$GMImageLayer":"","%Name":"171d7fb4-989d-432f-abfe-e620538c3684","blendMode":0,"displayName":"default","isLocked":false,"name":"171d7fb4-989d-432f-abfe-e620538c3684","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
-  "name":"sPlantStrawberry_1",
+  "name":"sPlantStrawberry",
   "nineSlice":null,
-  "origin":4,
+  "origin":9,
   "parent":{
-    "name":"group1",
-    "path":"folders/Sprites/Farming System/Growth Stage/group1.yy",
+    "name":"Growth Stage",
+    "path":"folders/Sprites/Farming System/Growth Stage.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",
@@ -54,7 +53,7 @@
     },
     "eventStubScript":null,
     "eventToFunction":{},
-    "length":6.0,
+    "length":5.0,
     "lockOrigin":false,
     "moments":{
       "$KeyframeStore<MomentsEventKeyframe>":"",
@@ -74,29 +73,26 @@
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"658b4aec-e888-4534-8f8f-73eef2747e18","path":"sprites/sPlantStrawberry_1/sPlantStrawberry_1.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"658b4aec-e888-4534-8f8f-73eef2747e18","path":"sprites/sPlantStrawberry/sPlantStrawberry.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"ce4c960d-0415-4352-8f81-7d5e2ae245b3","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"c0f79746-4ed1-4017-9be6-2be3ec0280b0","path":"sprites/sPlantStrawberry_1/sPlantStrawberry_1.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"c0f79746-4ed1-4017-9be6-2be3ec0280b0","path":"sprites/sPlantStrawberry/sPlantStrawberry.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"efd2fbc0-0483-4a5a-b43e-689aea5d98fa","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"7c67f245-1f32-4306-9de4-c5cb7be67fd9","path":"sprites/sPlantStrawberry_1/sPlantStrawberry_1.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"7c67f245-1f32-4306-9de4-c5cb7be67fd9","path":"sprites/sPlantStrawberry/sPlantStrawberry.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"320168a9-ca0b-430b-862e-19cb835080d0","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"5e0e3b35-26cc-40de-ad1f-8952ccad2b84","path":"sprites/sPlantStrawberry_1/sPlantStrawberry_1.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"5e0e3b35-26cc-40de-ad1f-8952ccad2b84","path":"sprites/sPlantStrawberry/sPlantStrawberry.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"ec5465ab-768d-4413-8c48-99ec3059d431","IsCreationKey":false,"Key":3.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"517cc9bc-be5a-4529-a18b-0563020ba787","path":"sprites/sPlantStrawberry_1/sPlantStrawberry_1.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"b330a934-be21-40d4-aa18-57f80dca7c03","IsCreationKey":false,"Key":4.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"3011c646-d309-46d7-839e-b3ff26758d57","path":"sprites/sPlantStrawberry_1/sPlantStrawberry_1.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"8d60a3eb-abe7-4df5-8955-07db2cb21c59","IsCreationKey":false,"Key":5.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"3011c646-d309-46d7-839e-b3ff26758d57","path":"sprites/sPlantStrawberry/sPlantStrawberry.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"8d60a3eb-abe7-4df5-8955-07db2cb21c59","IsCreationKey":false,"Key":4.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,
     "volume":1.0,
     "xorigin":8,
-    "yorigin":8,
+    "yorigin":13,
   },
   "swatchColours":null,
   "swfPrecision":0.5,
