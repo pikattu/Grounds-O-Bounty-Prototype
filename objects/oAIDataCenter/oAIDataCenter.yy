@@ -1,15 +1,13 @@
 {
   "$GMObject":"",
-  "%Name":"oTextBox",
-  "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-  ],
+  "%Name":"oAIDataCenter",
+  "eventList":[],
   "managed":true,
-  "name":"oTextBox",
+  "name":"oAIDataCenter",
   "overriddenProperties":[],
   "parent":{
-    "name":"GUI",
-    "path":"folders/Objects/GUI.yy",
+    "name":"Exterior",
+    "path":"folders/Objects/Exterior.yy",
   },
   "parentObjectId":null,
   "persistent":false,

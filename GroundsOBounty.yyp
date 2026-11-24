@@ -78,6 +78,7 @@
   },
   "name":"GroundsOBounty",
   "resources":[
+    {"id":{"name":"oAIDataCenter","path":"objects/oAIDataCenter/oAIDataCenter.yy",},},
     {"id":{"name":"oAntiquePopup","path":"objects/oAntiquePopup/oAntiquePopup.yy",},},
     {"id":{"name":"oAntiqueStore","path":"objects/oAntiqueStore/oAntiqueStore.yy",},},
     {"id":{"name":"oBasketballCourt","path":"objects/oBasketballCourt/oBasketballCourt.yy",},},
@@ -124,7 +125,6 @@
     {"id":{"name":"oSettingsMenu","path":"objects/oSettingsMenu/oSettingsMenu.yy",},},
     {"id":{"name":"oStore","path":"objects/oStore/oStore.yy",},},
     {"id":{"name":"oTable","path":"objects/oTable/oTable.yy",},},
-    {"id":{"name":"oTextBox","path":"objects/oTextBox/oTextBox.yy",},},
     {"id":{"name":"oTimeOfDay","path":"objects/oTimeOfDay/oTimeOfDay.yy",},},
     {"id":{"name":"oTorch","path":"objects/oTorch/oTorch.yy",},},
     {"id":{"name":"oTp","path":"objects/oTp/oTp.yy",},},
@@ -257,6 +257,7 @@
     {"id":{"name":"sPrincessIdleLeft","path":"sprites/sPrincessIdleLeft/sPrincessIdleLeft.yy",},},
     {"id":{"name":"sPrincessIdleRight","path":"sprites/sPrincessIdleRight/sPrincessIdleRight.yy",},},
     {"id":{"name":"sPrincessIdleUp","path":"sprites/sPrincessIdleUp/sPrincessIdleUp.yy",},},
+    {"id":{"name":"Sprite132","path":"sprites/Sprite132/Sprite132.yy",},},
     {"id":{"name":"sRice","path":"sprites/sRice/sRice.yy",},},
     {"id":{"name":"sRiceSeeds","path":"sprites/sRiceSeeds/sRiceSeeds.yy",},},
     {"id":{"name":"sSchool","path":"sprites/sSchool/sSchool.yy",},},

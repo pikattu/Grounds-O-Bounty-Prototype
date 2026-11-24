@@ -51,7 +51,7 @@ function dialogue_conversations(_role) {
 }
 
 function dialogue_ensure() {
-    if (!instance_exists(oDialogue)) instance_create_depth(0, 0, -20000, oDialogue);
+    if (!instance_exists(oDialogue)) instance_create_depth(0, 0, -30000, oDialogue);
 }
 
 function dialogue_create() {
@@ -164,7 +164,7 @@ function dialogue_draw_gui() {
         var _bw = _gw * 0.8;
         var _bh = _gh * 0.25;
         var _bx = (_gw - _bw) / 2;
-        var _by = _gh - _bh - _gh * 0.03;
+        var _by = _gh - _bh - _gh * 0.02;
 
         if (floor(chars) == 1) {
             show_debug_message("dlg box: gui " + string(_gw) + "x" + string(_gh)

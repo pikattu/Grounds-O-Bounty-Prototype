@@ -376,8 +376,12 @@ if instance_exists(oPlot) {
 					}
 						
 						
+					// Reset harvested plot completely
 					NC.Crop = undefined;
 					NC.Tick = 0;
+					NC.Stage = 0;
+					NC.SubImage = 0;
+					NC.IsFullyGrown = false;
 					NC.isFertilized = false;
 					
 				}
@@ -407,37 +411,67 @@ if instance_exists(oPlot) {
 			
 				case "Seed":
 
-			
-					var NP = instance_nearest(mouse_x, mouse_y, oPlot);
-					if point_in_rectangle(mouse_x,mouse_y,NP.x-8, NP.y-8,NP.x+8, NP.y+8) and point_distance(oPlayer.x,oPlayer.y,NP.x, NP.y) < 32 {
-					
-					 // NP = nearest plot
-					
-						var Crop = undefined;
-					
-						switch(Inv[HotbarSelect][0]) {
-						
-							case global.ItemCornSeeds:
-								Crop = global.CropCorn;
-							break;
-						
-						
-							case global.ItemPineappleSeeds:
-								Crop = global.CropPineapple;
-							break;
-						
-							case global.ItemRiceSeeds:
-								Crop = global.CropRice;
-							break;
-						
-							case global.ItemStrawberrySeeds:
-								Crop = global.CropStrawberry;
-							break;
-						}
-						NP.Crop = Crop;
-						InventoryRemove(Inv, Inv[HotbarSelect][0], 1);
-					} 
-				
+				    // Find nearest plot
+				    var NP = instance_nearest(mouse_x, mouse_y, oPlot);
+
+				    // Check if plot exists
+				    if (instance_exists(NP)) {
+
+				        // Check distance and mouse position
+				        if (point_in_rectangle(
+				            mouse_x, mouse_y,
+				            NP.x - 8, NP.y - 8,
+				            NP.x + 8, NP.y + 8
+				        ) && point_distance(oPlayer.x, oPlayer.y, NP.x, NP.y) < 32) {
+
+				            // Only plant on empty plots
+				            if (NP.Crop == undefined) {
+
+				                var Crop = undefined;
+
+				                // Identify crop from seed
+				                switch (Inv[HotbarSelect][0]) {
+
+				                    case global.ItemCornSeeds:
+				                        Crop = global.CropCorn;
+				                    break;
+
+				                    case global.ItemPineappleSeeds:
+				                        Crop = global.CropPineapple;
+				                    break;
+
+				                    case global.ItemRiceSeeds:
+				                        Crop = global.CropRice;
+				                    break;
+
+				                    case global.ItemStrawberrySeeds:
+				                        Crop = global.CropStrawberry;
+				                    break;
+				                }
+
+				                // Plant crop
+				                if (Crop != undefined) {
+
+				                    NP.Crop = Crop;
+
+				                    // Reset growth
+				                    NP.Tick = 0;
+				                    NP.Stage = 0;
+				                    NP.SubImage = 0;
+				                    NP.IsFullyGrown = false;
+				                    NP.isFertilized = false;
+
+				                    // Consume seed
+				                    InventoryRemove(Inv, Inv[HotbarSelect][0], 1);
+
+				                }
+				            }
+				            else {
+				                show_debug_message("Plot is not empty!");
+				            }
+				        }
+				    }
+
 				break;
 			
 				case "Fertilizer":
@@ -461,56 +495,15 @@ if instance_exists(oPlot) {
 	}
 }
 
-// Draw dialogue
 
-if (instance_exists(oTextBox)) {
-    var spaceNext = keyboard_check_pressed(vk_space);
+// ==========================================
+// DIALOGUE - DRAW LAST (ABOVE GUI)
+// ==========================================
 
-    // Handle pages
-    if (spaceNext) {
-        if (oTextBox.CurrentChar >= string_length(oTextBox.Text[oTextBox.Page])) {
-            if (oTextBox.Page < array_length(oTextBox.Text) - 1) {
-                oTextBox.Page++;
-                oTextBox.CurrentChar = 0;
-                oTextBox.String = "";
-            } else {
-                instance_destroy(oTextBox);
-            }
-        } else {
-            oTextBox.CurrentChar = string_length(oTextBox.Text[oTextBox.Page]);
-        }
+if (instance_exists(oDialogue))
+{
+    with (oDialogue)
+    {
+        dialogue_draw_gui();
     }
-
-	// Handle Typewritter effect
-	
-	if instance_exists(oTextBox) {
-		
-		if oTextBox.CurrentChar < string_length(oTextBox.Text[oTextBox.Page]) {
-		oTextBox.CurrentChar += oTextBox.TextSpeed * global.DT;
-		}
-	}
-	
-	
-	
-	// Reset String and Add new string +1 Character each update
-	if instance_exists(oTextBox) {
-		
-		if (string_length(oTextBox.String) < string_length(oTextBox.Text[oTextBox.Page])) {
-			for (var i = 1; i < oTextBox.CurrentChar + 1; i++) {
-			    var Char = string_copy(oTextBox.Text[oTextBox.Page], 1, oTextBox.CurrentChar);
-			    oTextBox.String = string(Char);
-			}
-		}
-	}
-
-	// Draw TextBox
-	
-	if instance_exists(oTextBox) {
-		
-		oTextBox.Anim +=1 * global.DT;
-		draw_sprite_stretched(sTextBox,oTextBox.Anim,oTextBox.TBX,oTextBox.TBY, oTextBox.TBoxWidth,oTextBox.TBoxHeight);
-		draw_set_font(global.FontDialogue);
-		draw_text_ext(oTextBox.TBX+oTextBox.Border,oTextBox.TBY+oTextBox.Border,oTextBox.String,oTextBox.LinePadding,oTextBox.Width);
-		
-		}
-	}
+}

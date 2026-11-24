@@ -2,7 +2,7 @@
 // CHEST INTERACTION (E)
 // ==========================================
 
-if (keyboard_check_pressed(ord("E")) && !instance_exists(oTextBox))
+if (keyboard_check_pressed(ord("E")))
 {
     // Close chest
     if (ChestOpen)
@@ -43,7 +43,7 @@ if (keyboard_check_pressed(ord("E")) && !instance_exists(oTextBox))
 // NORMAL INVENTORY (TAB)
 // ==========================================
 
-if (keyboard_check_pressed(vk_tab) && !instance_exists(oTextBox))
+if (keyboard_check_pressed(vk_tab))
 {
     if (ChestOpen)
     {

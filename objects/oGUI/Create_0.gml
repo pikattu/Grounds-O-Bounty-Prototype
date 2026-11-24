@@ -19,13 +19,13 @@ display_set_gui_size(oCamera.camWidth,oCamera.camHeight);
 book_sprite = sInventoryBook;
 
 // STARTING ITEMS
-InventoryAdd(Inv,global.ItemCorn,4);
-InventoryAdd(Inv,global.ItemPineappleSeeds,1);
+InventoryAdd(Inv,global.ItemCorn,20);
+InventoryAdd(Inv,global.ItemPineappleSeeds,20);
 InventoryAdd(Inv,global.ItemHoe,1);
-InventoryAdd(Inv,global.ItemCornSeeds,4);
-InventoryAdd(Inv,global.ItemStrawberrySeeds,4);
-InventoryAdd(Inv,global.ItemRiceSeeds,4);
-InventoryAdd(Inv,global.ItemFertilizer,4);
+InventoryAdd(Inv,global.ItemCornSeeds,20);
+InventoryAdd(Inv,global.ItemStrawberrySeeds,20);
+InventoryAdd(Inv,global.ItemRiceSeeds,20);
+InventoryAdd(Inv,global.ItemFertilizer,20);
 
 // Drag Variables
 InvFrom = undefined;

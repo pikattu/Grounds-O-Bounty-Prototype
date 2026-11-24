@@ -1,4 +1,3 @@
-
 /// oTimeOfDay - Step Event
 
 // Stop if the day/night controller has not initialized yet

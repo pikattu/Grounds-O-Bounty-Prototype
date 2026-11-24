@@ -13,7 +13,6 @@ if (current_time mod 2000 < 20) {
         }
     }
     show_debug_message("dlg | player:" + string(instance_exists(oPlayer))
-        + " textboxes:" + string(instance_number(oTextBox))
         + " nearest npc dist:" + string(round(_dd))
         + " near:" + string(near_npc) + " active:" + string(active));
 }
