@@ -1,6 +1,6 @@
 {
   "$GMTileSet":"v1",
-  "%Name":"TileSet5",
+  "%Name":"tsInterirorWalls",
   "autoTileSets":[
     {"$GMAutoTileSet":"","%Name":"autotile_1","closed_edge":false,"name":"autotile_1","resourceType":"GMAutoTileSet","resourceVersion":"2.0","tiles":[
         222,165,166,116,219,169,171,0,218,221,223,276,0,0,0,162,168,164,217,161,117,113,112,109,224,220,167,
@@ -12,7 +12,7 @@
     "SerialiseWidth":0,
     "TileSerialiseData":[],
   },
-  "name":"TileSet5",
+  "name":"tsInterirorWalls",
   "out_columns":39,
   "out_tilehborder":2,
   "out_tilevborder":2,

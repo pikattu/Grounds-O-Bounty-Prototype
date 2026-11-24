@@ -1,3 +1,4 @@
+event_inherited()
 role = "eduardo";
 move_speed = 2;
 

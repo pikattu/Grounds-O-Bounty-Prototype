@@ -1,4 +1,5 @@
 //var _gw = display_get_gui_width();
+//var _gw = display_get_gui_width();
 //var _gh = display_get_gui_height();
 
 //button_width  = _gw * 0.32;
@@ -108,7 +109,8 @@ for (var i = 0; i < array_length(_list); i++)
     }
 
     draw_sprite_ext(_spr, 0, _dx, _dy, btn_scale, btn_scale, 0, _col, _alpha);
-
+	
+	draw_set_font(global.FontDialogue);
     draw_set_halign(fa_center);
     draw_set_valign(fa_middle);
     draw_set_alpha(_alpha);

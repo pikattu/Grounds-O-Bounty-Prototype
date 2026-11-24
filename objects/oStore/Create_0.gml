@@ -1,3 +1,4 @@
+event_inherited()
 // Store settings
 InteractDistance = 32;
 

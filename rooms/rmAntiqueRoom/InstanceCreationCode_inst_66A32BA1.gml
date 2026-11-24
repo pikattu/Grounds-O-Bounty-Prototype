@@ -1,3 +1,3 @@
-targetRoom = rmPlayerFarm;
-targetX = 640;
-targetY = 145;
+targetRoom = rmVillage;
+targetX = 718;
+targetY = 194;

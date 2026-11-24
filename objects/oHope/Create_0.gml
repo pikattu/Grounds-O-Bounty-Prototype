@@ -1,3 +1,4 @@
+event_inherited()
 role = "hope";
 move_speed = 2;
 
