@@ -28,3 +28,11 @@ FertilizerSpeed = 1.5;
 Stage = 0;
 SubImage = 0;
 IsFullyGrown = false;
+
+// ==========================================
+// WATERING SYSTEM
+// ==========================================
+
+IsWatered = false;
+DryDays = 0;
+IsDead = false;

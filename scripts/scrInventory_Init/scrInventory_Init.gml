@@ -15,6 +15,7 @@ function scrInventory_Init(){
 	// STARTING ITEMS
 	InventoryAdd(Inv,global.ItemCorn,20);
 	InventoryAdd(Inv,global.ItemPineappleSeeds,20);
+	InventoryAdd(Inv,global.ItemWateringCan,1);
 	InventoryAdd(Inv,global.ItemHoe,1);
 	InventoryAdd(Inv,global.ItemCornSeeds,20);
 	InventoryAdd(Inv,global.ItemStrawberrySeeds,20);

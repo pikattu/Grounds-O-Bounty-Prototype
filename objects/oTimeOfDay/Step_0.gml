@@ -10,13 +10,48 @@ var _deltaSeconds = delta_time / 1000000;
 // Convert real time into in-game seconds
 var _gameSeconds = _deltaSeconds * global.GameTimeScale;
 
+
+// ==========================================
+// DAILY CROP WATER CHECK
+// ==========================================
+
+// Detect when a new day begins
+var _currentDay = floor(global.Time / 86400);
+
+if (_currentDay > global.CropTick) {
+
+    global.CropTick = _currentDay;
+
+    with (oPlot) {
+
+        if (Crop != undefined && !IsFullyGrown && !IsDead) {
+
+            if (IsWatered) {
+                DryDays = 0;
+            }
+            else {
+                DryDays++;
+            }
+
+            // Die after 2 consecutive dry days
+            if (DryDays >= 2) {
+                IsDead = true;
+            }
+
+            // Reset water for the next day
+            IsWatered = false;
+        }
+    }
+}
+
+
 // ==========================================
 // UPDATE ALL PLANTED CROPS
 // ==========================================
 
 with (oPlot) {
 
-    if (Crop != undefined && !IsFullyGrown) {
+   if (Crop != undefined && !IsFullyGrown && !IsDead && IsWatered) {
 
         // Normal growth
         var _growthSpeed = 1;

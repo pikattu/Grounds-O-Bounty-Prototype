@@ -7,7 +7,7 @@ persistent = true;
 // CONFIGURATION
 // ==========================================
 
-DayLengthMinutes = 10;
+DayLengthMinutes = 0.5; //change this
 
 StartingHour = 6;
 

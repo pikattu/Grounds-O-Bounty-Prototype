@@ -16,7 +16,7 @@ global.is_new_game = true;
 
 global.Day = 1;
 
-// Starting time: 6 PM
+// Starting time: 6 AM
 global.Time = 6 * 3600;
 
 global.TimeOfDay = global.Time / 86400;

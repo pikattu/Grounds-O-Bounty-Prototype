@@ -361,31 +361,80 @@ else
 if instance_exists(oPlot) {
 	if mouse_check_button_pressed(mb_left) && !InvOpen && !StoreOpen {
 	
-		// Harvest
-		var NC = instance_nearest(mouse_x, mouse_y, oPlot); // NC ? nearest crop
-		if NC.Crop != undefined {
-			if point_in_rectangle(mouse_x,mouse_y,NC.x-8, NC.y-8,NC.x+8, NC.y+8) and point_distance(oPlayer.x,oPlayer.y,NC.x, NC.y) < 32 {
-				if NC.Tick >= NC.Crop.GrowTime{
-						
-					var Item = NC.Crop.Drop[0];
-					var Amount = NC.Crop.Drop[1];
-				
-					repeat(Amount){
-						var Drop= instance_create_depth(NC.x,NC.y,0,oItem);
-						Drop.Item = Item;
-					}
-						
-						
-					// Reset harvested plot completely
-					NC.Crop = undefined;
-					NC.Tick = 0;
-					NC.Stage = 0;
-					NC.SubImage = 0;
-					NC.IsFullyGrown = false;
-					NC.isFertilized = false;
-					
-				}
-			}
+		// ==========================================
+		// HARVEST OR REMOVE DEAD CROP
+		// ==========================================
+
+		var NC = instance_nearest(mouse_x, mouse_y, oPlot);
+
+		if (instance_exists(NC)) {
+
+		    if (point_in_rectangle(
+		        mouse_x, mouse_y,
+		        NC.x - 8, NC.y - 8,
+		        NC.x + 8, NC.y + 8
+		    ) && point_distance(oPlayer.x, oPlayer.y, NC.x, NC.y) < 32) {
+
+		        if (NC.Crop != undefined) {
+
+		            // DEAD CROP
+		            if (NC.IsDead) {
+
+		                NC.Crop = undefined;
+		                NC.Tick = 0;
+		                NC.Stage = 0;
+		                NC.SubImage = 0;
+		                NC.IsFullyGrown = false;
+
+		                NC.IsWatered = false;
+		                NC.DryDays = 0;
+		                NC.IsDead = false;
+		                NC.isFertilized = false;
+
+		                show_debug_message("Dead crop removed!");
+
+		            }
+
+		            // NORMAL CROP
+		            else if (NC.Tick >= NC.Crop.GrowTime) {
+
+		                var Item = NC.Crop.Drop[0];
+		                var Amount = NC.Crop.Drop[1];
+
+		                repeat (Amount) {
+
+		                    var Drop = instance_create_depth(
+		                        NC.x, NC.y, 0, oItem
+		                    );
+
+		                    Drop.Item = Item;
+		                }
+
+		                // Reset plot
+		                NC.Crop = undefined;
+		                NC.Tick = 0;
+		                NC.Stage = 0;
+		                NC.SubImage = 0;
+		                NC.IsFullyGrown = false;
+
+		                NC.IsWatered = false;
+		                NC.DryDays = 0;
+		                NC.IsDead = false;
+		                NC.isFertilized = false;
+
+		                show_debug_message("Crop harvested!");
+
+		            }
+		            else {
+		                show_debug_message(
+		                    "Crop not ready: "
+		                    + string(NC.Tick)
+		                    + " / "
+		                    + string(NC.Crop.GrowTime)
+		                );
+		            }
+		        }
+		    }
 		}
 	
 		// Use item
@@ -397,16 +446,61 @@ if instance_exists(oPlot) {
 				break;
 			
 				case "Tool":
-			
-					var xx = round(mouse_x/16)*16;
-					var yy = round(mouse_y/16)*16;
-				
-					if !collision_rectangle(xx-2, yy-2, xx+2,yy+2, oPlot,0,1) {
-						instance_create_depth(xx,yy,0,oPlot);
-					}
-				
-			
-			
+
+				    // ==========================================
+				    // WATERING CAN
+				    // ==========================================
+
+				    if (Inv[HotbarSelect][0] == global.ItemWateringCan) {
+
+				        // Find nearest plot
+				        var _plot = instance_nearest(mouse_x, mouse_y, oPlot);
+
+				        // Check if plot exists and is within reach
+				        if (instance_exists(_plot)) {
+
+				            if (point_in_rectangle(
+				                mouse_x, mouse_y,
+				                _plot.x - 8, _plot.y - 8,
+				                _plot.x + 8, _plot.y + 8
+				            ) && point_distance(
+				                oPlayer.x, oPlayer.y,
+				                _plot.x, _plot.y
+				            ) < 32) {
+
+				                // Water planted crops
+				                if (_plot.Crop != undefined
+				                && !_plot.IsDead
+				                && !_plot.IsWatered) {
+
+				                    _plot.IsWatered = true;
+				                    _plot.DryDays = 0;
+
+				                    show_debug_message("Crop watered!");
+				                }
+				            }
+				        }
+
+				    }
+
+				    // ==========================================
+				    // HOE
+				    // ==========================================
+
+				    else {
+
+				        var xx = round(mouse_x/16)*16;
+				        var yy = round(mouse_y/16)*16;
+
+				        if (!collision_rectangle(
+				            xx-2, yy-2,
+				            xx+2, yy+2,
+				            oPlot, 0, 1
+				        )) {
+				            instance_create_depth(xx, yy, 0, oPlot);
+				        }
+				    }
+
 				break;
 			
 				case "Seed":
@@ -475,19 +569,33 @@ if instance_exists(oPlot) {
 				break;
 			
 				case "Fertilizer":
-			
-				if (NP != noone) {
 
-					var NP = instance_nearest(mouse_x, mouse_y, oPlot);
-						if point_in_rectangle(mouse_x,mouse_y,NP.x-8, NP.y-8,NP.x+8, NP.y+8) and point_distance(oPlayer.x,oPlayer.y,NP.x, NP.y) < 32 {
-				
-				
-							NP.isFertilized = true;
-							InventoryRemove(Inv, Inv[HotbarSelect][0], 1);
-						}
-					
-					break;
-				}
+				    var NP = instance_nearest(mouse_x, mouse_y, oPlot);
+
+				    if (instance_exists(NP)) {
+
+				        if (point_in_rectangle(
+				            mouse_x, mouse_y,
+				            NP.x - 8, NP.y - 8,
+				            NP.x + 8, NP.y + 8
+				        ) && point_distance(
+				            oPlayer.x, oPlayer.y,
+				            NP.x, NP.y
+				        ) < 32) {
+
+				            // Apply fertilizer only to an empty plot
+				            if (NP.Crop == undefined && !NP.isFertilized) {
+
+				                NP.isFertilized = true;
+
+				                InventoryRemove(Inv, Inv[HotbarSelect][0], 1);
+
+				                show_debug_message("Plot fertilized!");
+				            }
+				        }
+				    }
+
+				break;
 	
 			}
 		}		

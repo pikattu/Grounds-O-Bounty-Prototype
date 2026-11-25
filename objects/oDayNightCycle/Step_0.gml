@@ -16,6 +16,31 @@ global.Time += _deltaSeconds * TimeScale;
 while (global.Time >= 86400) {
     global.Time -= 86400;
     global.Day += 1;
+
+    // ==========================================
+    // DAILY CROP WATER CHECK
+    // ==========================================
+
+    with (oPlot) {
+
+        if (Crop != undefined && !IsFullyGrown && !IsDead) {
+
+            if (IsWatered) {
+                DryDays = 0;
+            }
+            else {
+                DryDays++;
+            }
+
+            // Die after 2 consecutive dry days
+            if (DryDays >= 2) {
+                IsDead = true;
+            }
+
+            // Reset water for the next day
+            IsWatered = false;
+        }
+    }
 }
 
 global.TimeOfDay = global.Time / 86400;

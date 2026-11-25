@@ -80,9 +80,14 @@ function InteractWithPlot(_plot, _inventory, _slot) {
 	_plot.SubImage = 0;
 	_plot.IsFullyGrown = false;
 	_plot.isFertilized = false;
+	_plot.IsFullyGrown = false;
+	_plot.isFertilized = false;
 
 	// Consume one seed
 	InvRemove(_inventory, _heldItem);
+	
+	if (_plot.IsDead) {
+    return;
+	}
 
-	return;
 }
