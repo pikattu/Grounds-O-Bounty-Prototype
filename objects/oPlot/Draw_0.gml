@@ -46,4 +46,11 @@ if (Crop != undefined) {
             );
         }
     }
+	draw_text(x, y - 40,
+    "Tick: " + string(Tick)
+    + " | Stage: " + string(Stage)
+    + " | Mature: " + string(IsFullyGrown)
+    + " | Watered: " + string(IsWatered)
+);
 }
+

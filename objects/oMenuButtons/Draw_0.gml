@@ -110,7 +110,7 @@ for (var i = 0; i < array_length(_list); i++)
 
     draw_sprite_ext(_spr, 0, _dx, _dy, btn_scale, btn_scale, 0, _col, _alpha);
 	
-	draw_set_font(global.FontDialogue);
+	draw_set_font(global.Font);
     draw_set_halign(fa_center);
     draw_set_valign(fa_middle);
     draw_set_alpha(_alpha);

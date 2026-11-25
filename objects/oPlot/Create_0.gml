@@ -16,7 +16,7 @@ Tick = 0;
 GrowthStages = 5;
 
 // Growth speed multiplier
-// 1.0 = normal
+// 1.0 =a normal
 // 1.5 = 50% faster
 // 2.0 = twice as fast
 FertilizerSpeed = 1.5;

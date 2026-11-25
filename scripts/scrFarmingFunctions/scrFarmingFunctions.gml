@@ -1,3 +1,4 @@
+
 function InteractWithPlot(_plot, _inventory, _slot) {
 
     // Validate plot
@@ -9,6 +10,7 @@ function InteractWithPlot(_plot, _inventory, _slot) {
     if (_slot < 0 || _slot >= array_length(_inventory)) {
         return;
     }
+
 
     // ==========================================
     // PRIORITY 1: HARVEST MATURE CROP
@@ -38,56 +40,57 @@ function InteractWithPlot(_plot, _inventory, _slot) {
         _plot.Crop = undefined;
         _plot.Tick = 0;
         _plot.Stage = 0;
+        _plot.SubImage = 0;
         _plot.IsFullyGrown = false;
         _plot.isFertilized = false;
 
         return;
     }
 
-   // ==========================================
-	// PRIORITY 2: PLANT SEED
-	// ==========================================
 
-	var _selectedSlot = _inventory[_slot];
+    // ==========================================
+    // PRIORITY 2: PLANT SEED
+    // ==========================================
 
-	if (_selectedSlot == -1) {
-	    return;
-	}
+    // Do not plant on a dead plot
+    if (_plot.IsDead) {
+        return;
+    }
 
-	var _heldItem = _selectedSlot[0];
+    var _selectedSlot = _inventory[_slot];
 
-	// Only seeds can be planted
-	if (_heldItem.ItemType != "Seed") {
-	    return;
-	}
+    if (_selectedSlot == -1) {
+        return;
+    }
 
-	// Identify crop
-	var _crop = CropFromSeed(_heldItem);
+    var _heldItem = _selectedSlot[0];
 
-	if (_crop == undefined) {
-	    return;
-	}
+    // Only seeds can be planted
+    if (_heldItem.ItemType != "Seed") {
+        return;
+    }
 
-	// ==========================================
-	// PLANT NEW CROP
-	// ==========================================
+    // Identify crop
+    var _crop = CropFromSeed(_heldItem);
 
-	_plot.Crop = _crop;
+    if (_crop == undefined) {
+        return;
+    }
 
-	// RESET CROP GROWTH FOR NEWLY PLANTED CROP
-	_plot.Tick = 0;
-	_plot.Stage = 0;
-	_plot.SubImage = 0;
-	_plot.IsFullyGrown = false;
-	_plot.isFertilized = false;
-	_plot.IsFullyGrown = false;
-	_plot.isFertilized = false;
 
-	// Consume one seed
-	InvRemove(_inventory, _heldItem);
-	
-	if (_plot.IsDead) {
-    return;
-	}
+    // ==========================================
+    // PLANT NEW CROP
+    // ==========================================
 
+    _plot.Crop = _crop;
+
+    // Reset crop growth for newly planted crop
+    _plot.Tick = 0;
+    _plot.Stage = 0;
+    _plot.SubImage = 0;
+    _plot.IsFullyGrown = false;
+    _plot.isFertilized = false;
+
+    // Consume one seed
+    InvRemove(_inventory, _heldItem);
 }

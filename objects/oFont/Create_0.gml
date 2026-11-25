@@ -1,3 +1,3 @@
-global.FontDialogue = font_add_sprite_ext(sDialogueFontMap, "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890.,:!?_-", true, 1);
+global.Font= font_add_sprite_ext(sFont, "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890.,:!?_-", true, 1);
 
-show_debug_message(global.FontDialogue);
+show_debug_message(global.Font);

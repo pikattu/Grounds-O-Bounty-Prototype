@@ -7,23 +7,33 @@ persistent = true;
 // CONFIGURATION
 // ==========================================
 
-DayLengthMinutes = 0.5; //change this
+// CHANGE THIS TO ADJUST THE LENGTH OF ONE GAME DAY
+DayLengthMinutes = 0.5;
 
+// Starting time
 StartingHour = 6;
 
+// Sunrise and sunset
 SunriseHour = 6;
 SunsetHour = 18;
 
+// Duration of sunrise and sunset transitions
 TransitionHours = 2;
 
+
 // ==========================================
-// TIME SCALE
+// CENTRAL TIME CONFIGURATION
 // ==========================================
 
+// One in-game day always contains 86,400 seconds
 DayLengthSeconds = DayLengthMinutes * 60;
+
+// How many in-game seconds pass per real-world second
 TimeScale = 86400 / DayLengthSeconds;
 
+// Shared time scale for ALL time-based systems
 global.GameTimeScale = TimeScale;
+
 
 // ==========================================
 // LIGHTING
@@ -39,6 +49,7 @@ G = 255;
 B = 255;
 
 Darkness = 0;
+
 
 // ==========================================
 // INITIALIZE GLOBAL DATA
@@ -60,13 +71,21 @@ if (!variable_global_exists("TorchOn")) {
     global.TorchOn = false;
 }
 
+if (!variable_global_exists("CropTick")) {
+    global.CropTick = global.Day;
+}
+
+
 // ==========================================
 // INITIAL LIGHTING
 // ==========================================
 
 var _hour = global.Time / 3600;
 
-global.TorchOn = (_hour >= SunsetHour || _hour < SunriseHour - TransitionHours);
+global.TorchOn = (
+    _hour >= SunsetHour ||
+    _hour < SunriseHour - TransitionHours
+);
 
 if (_hour >= SunsetHour || _hour < SunriseHour - TransitionHours) {
     Darkness = 0.75;
