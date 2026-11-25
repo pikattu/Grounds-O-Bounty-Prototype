@@ -1,12 +1,12 @@
 {
   "$GMScript":"v1",
-  "%Name":"scr_Dialogue",
+  "%Name":"scrNewGame",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"scr_Dialogue",
+  "name":"scrNewGame",
   "parent":{
-    "name":"Scripts",
-    "path":"folders/Scripts.yy",
+    "name":"GUI",
+    "path":"folders/Scripts/GUI.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

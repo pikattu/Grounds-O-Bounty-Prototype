@@ -1,5 +1,5 @@
-ItemInformation();
-CropInformation();
+scrItemInformation();
+scrCropInformation();
 // Inv Size
 InvWidth = 5;
 InvHeight = 5;

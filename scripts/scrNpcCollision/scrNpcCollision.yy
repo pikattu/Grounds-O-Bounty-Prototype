@@ -1,12 +1,12 @@
 {
   "$GMScript":"v1",
-  "%Name":"scr_Antiques",
+  "%Name":"scrNpcCollision",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"scr_Antiques",
+  "name":"scrNpcCollision",
   "parent":{
-    "name":"Scripts",
-    "path":"folders/Scripts.yy",
+    "name":"NPCS",
+    "path":"folders/Scripts/NPCS.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

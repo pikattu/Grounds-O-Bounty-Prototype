@@ -1,12 +1,12 @@
 {
   "$GMScript":"v1",
-  "%Name":"ItemInformation",
+  "%Name":"scrItemInformation",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"ItemInformation",
+  "name":"scrItemInformation",
   "parent":{
-    "name":"Scripts",
-    "path":"folders/Scripts.yy",
+    "name":"Farming System",
+    "path":"folders/Scripts/Farming System.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

@@ -1,12 +1,12 @@
 {
   "$GMScript":"v1",
-  "%Name":"PlayerFunctions",
+  "%Name":"scrSaveGame",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"PlayerFunctions",
+  "name":"scrSaveGame",
   "parent":{
-    "name":"Scripts",
-    "path":"folders/Scripts.yy",
+    "name":"GUI",
+    "path":"folders/Scripts/GUI.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

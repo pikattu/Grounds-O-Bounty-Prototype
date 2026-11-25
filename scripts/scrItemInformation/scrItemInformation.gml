@@ -1,6 +1,6 @@
 // harvest time grow time not implemented
 
-function ItemInformation()
+function scrItemInformation()
 {
     // =========================
     // CROPS
@@ -76,6 +76,13 @@ function ItemInformation()
     {
         Name: "Hoe",
         Sprite: sHoe,
+        ItemType: "Tool"
+    };
+	
+	global.ItemWateringCan =
+    {
+        Name: "Watering Can",
+        Sprite: sWateringCan,
         ItemType: "Tool"
     };
 	

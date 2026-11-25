@@ -1,9 +1,9 @@
 {
   "$GMScript":"v1",
-  "%Name":"CropInformation",
+  "%Name":"scrAntiques",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"CropInformation",
+  "name":"scrAntiques",
   "parent":{
     "name":"Scripts",
     "path":"folders/Scripts.yy",

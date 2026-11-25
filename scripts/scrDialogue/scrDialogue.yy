@@ -1,12 +1,12 @@
 {
   "$GMScript":"v1",
-  "%Name":"InventoryFunctions",
+  "%Name":"scrDialogue",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"InventoryFunctions",
+  "name":"scrDialogue",
   "parent":{
-    "name":"Scripts",
-    "path":"folders/Scripts.yy",
+    "name":"GUI",
+    "path":"folders/Scripts/GUI.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

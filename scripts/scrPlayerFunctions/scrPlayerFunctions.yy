@@ -1,9 +1,9 @@
 {
   "$GMScript":"v1",
-  "%Name":"scr_SaveGame",
+  "%Name":"scrPlayerFunctions",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"scr_SaveGame",
+  "name":"scrPlayerFunctions",
   "parent":{
     "name":"Scripts",
     "path":"folders/Scripts.yy",

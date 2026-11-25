@@ -6,8 +6,8 @@
   "name":"oAIDataCenter",
   "overriddenProperties":[],
   "parent":{
-    "name":"Exterior",
-    "path":"folders/Objects/Exterior.yy",
+    "name":"Objects",
+    "path":"folders/Objects.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -27,7 +27,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"sAIDataCenter",
+    "path":"sprites/sAIDataCenter/sAIDataCenter.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }

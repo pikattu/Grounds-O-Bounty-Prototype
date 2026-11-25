@@ -1,4 +1,4 @@
-function CropInformation(){
+function scrCropInformation(){
 
     global.CropCorn = 
     {

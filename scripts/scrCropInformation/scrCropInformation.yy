@@ -1,12 +1,12 @@
 {
   "$GMScript":"v1",
-  "%Name":"scr_NewGame",
+  "%Name":"scrCropInformation",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"scr_NewGame",
+  "name":"scrCropInformation",
   "parent":{
-    "name":"Scripts",
-    "path":"folders/Scripts.yy",
+    "name":"Farming System",
+    "path":"folders/Scripts/Farming System.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",
