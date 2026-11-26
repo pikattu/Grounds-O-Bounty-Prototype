@@ -11,8 +11,8 @@
   "name":"oDayNightCycle",
   "overriddenProperties":[],
   "parent":{
-    "name":"Exterior Decord",
-    "path":"folders/Objects/Exterior Decord.yy",
+    "name":"Miscallaneusue",
+    "path":"folders/Objects/Miscallaneusue.yy",
   },
   "parentObjectId":null,
   "persistent":true,

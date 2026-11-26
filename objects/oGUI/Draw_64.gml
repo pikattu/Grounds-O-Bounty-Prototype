@@ -229,17 +229,12 @@ if (InvOpen)
                 draw_set_halign(fa_left);
                 draw_set_valign(fa_top);
 
-			draw_text_transformed(
-			    xx - 7, yy - 8,
-			    string(Inv[i][1]),
-			    0.5, 0.5, 0
-			);
+                draw_text_transformed(
+                    xx - 7, yy - 8,
+                    string(Inv[i][1]),
+                    0.5, 0.5, 0
+                );
 
-			draw_text_transformed(
-			    xx - 6.5, yy - 8,
-			    string(Inv[i][1]),
-			    0.5, 0.5, 0
-			);
                 draw_set_color(c_white);
             }
         }
@@ -293,17 +288,12 @@ if (InvOpen)
                     draw_set_halign(fa_left);
                     draw_set_valign(fa_top);
 
-					draw_text_transformed(
-					    xx - 7, yy - 8,
-					    string(Inv[i][1]),
-					    0.5, 0.5, 0
-					);
+                    draw_text_transformed(
+                        xx - 7, yy - 8,
+                        string(ChestInv[i][1]),
+                        0.5, 0.5, 0
+                    );
 
-					draw_text_transformed(
-					    xx - 6.5, yy - 8,
-					    string(Inv[i][1]),
-					    0.5, 0.5, 0
-					);
                     draw_set_color(c_white);
                 }
             }

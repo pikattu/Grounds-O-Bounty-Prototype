@@ -9,8 +9,8 @@
   "name":"oTimeOfDay",
   "overriddenProperties":[],
   "parent":{
-    "name":"Farming System",
-    "path":"folders/Objects/Farming System.yy",
+    "name":"Miscallaneusue",
+    "path":"folders/Objects/Miscallaneusue.yy",
   },
   "parentObjectId":null,
   "persistent":false,

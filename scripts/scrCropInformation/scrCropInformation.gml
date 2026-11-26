@@ -4,7 +4,7 @@ function scrCropInformation(){
     global.CropCorn = 
     {
         Sprite: sPlantCorn,
-        GrowTime: 2 * 86400, // ingame growdays * time each day
+        GrowTime: 1 * 86400, // ingame growdays * time each day
         Drop: [global.ItemCorn, 5]
     };
 
@@ -25,7 +25,7 @@ function scrCropInformation(){
     global.CropStrawberry = 
     {
         Sprite: sPlantStrawberry,
-        GrowTime: 2 * 86400,
+        GrowTime: 1 * 86400,
         Drop: [global.ItemStrawberry, 3]
     };
 }

@@ -13,3 +13,5 @@ global.TorchOn = false;
 
 // Current crop day
 global.CropTick = global.Day;
+
+

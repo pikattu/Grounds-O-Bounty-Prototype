@@ -39,6 +39,7 @@ if (point_in_rectangle(
     {
        //cr_NewGame();
 	   room_goto(rmPlayerFarm);
+	   AudioBG(musGameplay);
     }
 }
 

@@ -8,7 +8,7 @@ persistent = true;
 // ==========================================
 
 // CHANGE THIS TO ADJUST THE LENGTH OF ONE GAME DAY
-DayLengthMinutes = 0.5;
+DayLengthMinutes = 5;
 
 // Starting time
 StartingHour = 6;
