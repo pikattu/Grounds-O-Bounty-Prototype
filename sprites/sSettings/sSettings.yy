@@ -19,6 +19,7 @@
   "height":200,
   "HTile":false,
   "layers":[
+    {"$GMImageLayer":"","%Name":"a20f090a-8e2e-4a60-b50e-7d0bbe1afe10","blendMode":3,"displayName":"Layer 2","isLocked":false,"name":"a20f090a-8e2e-4a60-b50e-7d0bbe1afe10","opacity":30.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
     {"$GMImageLayer":"","%Name":"c1e49244-312d-489a-99b7-186b631ece54","blendMode":0,"displayName":"Layer 7","isLocked":false,"name":"c1e49244-312d-489a-99b7-186b631ece54","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
     {"$GMImageLayer":"","%Name":"6b88ccbd-93e7-4ac1-af3b-6cbf30177b39","blendMode":0,"displayName":"Layer 6","isLocked":false,"name":"6b88ccbd-93e7-4ac1-af3b-6cbf30177b39","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":false,},
     {"$GMImageLayer":"","%Name":"27ee3180-d776-4bfe-9c57-48f4a6a890d9","blendMode":0,"displayName":"Layer 3","isLocked":false,"name":"27ee3180-d776-4bfe-9c57-48f4a6a890d9","opacity":40.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
@@ -31,7 +32,7 @@
   "origin":0,
   "parent":{
     "name":"Inventory",
-    "path":"folders/Sprites/Inventory.yy",
+    "path":"folders/Sprites/GUI/Inventory.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

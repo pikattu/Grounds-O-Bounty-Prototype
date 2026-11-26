@@ -1,0 +1,16 @@
+event_inherited()
+role = "hope";
+move_speed = 2;
+
+state = "waiting";
+wait_duration = 12;
+wait_timer = 0;
+
+current_zone_index = 0;
+zone_mode = "wander";
+
+my_zones = [
+    obj_location_church,
+    obj_location_school,
+    obj_location_karinderya
+];

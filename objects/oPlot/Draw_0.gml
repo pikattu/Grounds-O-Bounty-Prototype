@@ -1,24 +1,56 @@
-draw_self();
 
-draw_text(x, y - 20, "Tick: " + string(Tick));
+/// oPlot - Draw Event
+
+// ==========================================
+// DRAW PLOT (SOIL)
+// ==========================================
+
+if (IsWatered) {
+    draw_sprite(sWateredPlot, 0, x, y);
+}
+else {
+    draw_self();
+}
+
+// ==========================================
+// DRAW CROP
+// ==========================================
 
 if (Crop != undefined) {
-    draw_text(x, y - 35, "PLANTED");
 
-    var Sprite = Crop.Sprite;
-    var SubImage = 0;
+    // Dead crop
+    if (IsDead) {
+        draw_sprite(sDeadCrop, 0, x, y);
+    }
+    else {
+        var _sprite = Crop.Sprite;
 
-    var TotalTime = Crop.GrowTime;
-    var StageTime = TotalTime / 5;
+        if (sprite_exists(_sprite)) {
 
-    if (Tick >= 0 && Tick < StageTime) SubImage = 0;
-    else if (Tick >= StageTime && Tick < StageTime * 2) SubImage = 1;
-    else if (Tick >= StageTime * 2 && Tick < StageTime * 3) SubImage = 2;
-    else if (Tick >= StageTime * 3 && Tick < StageTime * 4) SubImage = 3;
-    else if (Tick >= StageTime * 4) SubImage = 4;
+            var _subImage = clamp(
+                Stage,
+                0,
+                sprite_get_number(_sprite) - 1
+            );
 
-    draw_sprite_ext(Sprite, SubImage, x, y, 1, 1, 0, c_white, 1);
-
-} else {
-    draw_text(x, y - 35, "EMPTY");
+            draw_sprite_ext(
+                _sprite,
+                _subImage,
+                x,
+                y,
+                1,
+                1,
+                0,
+                c_white,
+                1
+            );
+        }
+    }
+	draw_text(x, y - 40,
+    "Tick: " + string(Tick)
+    + " | Stage: " + string(Stage)
+    + " | Mature: " + string(IsFullyGrown)
+    + " | Watered: " + string(IsWatered)
+);
 }
+

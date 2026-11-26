@@ -19,7 +19,7 @@
   "height":16,
   "HTile":false,
   "layers":[
-    {"$GMImageLayer":"","%Name":"e43b7adf-03b3-4103-943c-74277612b5a9","blendMode":0,"displayName":"Layer 2","isLocked":false,"name":"e43b7adf-03b3-4103-943c-74277612b5a9","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"a3ae6713-806f-4fd2-9338-9c0b0f2d9cc9","blendMode":0,"displayName":"Layer 1","isLocked":false,"name":"a3ae6713-806f-4fd2-9338-9c0b0f2d9cc9","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
   "name":"sPineappleSeeds",
   "nineSlice":null,

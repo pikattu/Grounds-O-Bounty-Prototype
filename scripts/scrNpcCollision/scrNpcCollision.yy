@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scrNpcCollision",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scrNpcCollision",
+  "parent":{
+    "name":"NPCS",
+    "path":"folders/Scripts/NPCS.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

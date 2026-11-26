@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scrNpcPathing",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scrNpcPathing",
+  "parent":{
+    "name":"NPCS",
+    "path":"folders/Scripts/NPCS.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

@@ -1,0 +1,2 @@
+scrInventoryInteractions();
+scrInventoryHotbar();
