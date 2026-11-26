@@ -5,6 +5,7 @@
 button_width = 180;
 button_height = 40;
 button_spacing = 15;
+has_save = save_data_exists();
 
 // Center buttons on screen
 var _center_x = display_get_gui_width() / 2;
@@ -19,8 +20,7 @@ continue_y = newgame_y + button_height + button_spacing;
 exit_y = continue_y + button_height + button_spacing;
 
 // Save availability
-save_file = "grounds_obounty.sav";
-has_save = file_exists(save_file);
+has_save = save_data_exists();
 
 // Hover tracking
 hovered_button = "";

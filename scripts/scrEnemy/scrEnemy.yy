@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"scrEnemy",
   "parent":{
-    "name":"GroundsOBounty",
-    "path":"GroundsOBounty.yyp",
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

@@ -1,3 +1,4 @@
+
 var _gw = 480;
 var _gh = 270;
 
@@ -35,12 +36,22 @@ if (point_in_rectangle(
 {
     hovered_button = "newgame";
 
+    if (point_in_rectangle(
+    _mx, _my,
+    button_x, newgame_y,
+    button_x + button_width,
+    newgame_y + button_height
+))
+{
+    hovered_button = "newgame";
+
     if (mouse_check_button_pressed(mb_left))
     {
-       //cr_NewGame();
-	   room_goto(rmPlayerFarm);
-	   AudioBG(musGameplay);
+        save_reset_runtime();
+        room_goto(rmPlayerFarm);
+        AudioBG(musGameplay);
     }
+}
 }
 
 // Continue hover
@@ -57,8 +68,24 @@ if (point_in_rectangle(
 
         if (mouse_check_button_pressed(mb_left))
         {
-            // We'll implement loading later
-            // scr_LoadGame();
+            if (point_in_rectangle(
+    _mx, _my,
+    button_x, continue_y,
+    button_x + button_width,
+    continue_y + button_height
+))
+{
+    if (has_save)
+    {
+        hovered_button = "continue";
+
+        if (mouse_check_button_pressed(mb_left))
+        {
+            if (load_game()) AudioBG(musGameplay);
+            else has_save = save_data_exists();
+        }
+    }
+}
         }
     }
 }

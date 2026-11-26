@@ -1,6 +1,7 @@
-#macro SAVE_FILE     "savegame.js"
-#macro SAVE_BACKUP   "savegame_backup.js"
-#macro SAVE_VERSION  1
+#macro SAVE_FILE         "savegame.js"
+#macro SAVE_BACKUP       "savegame_backup.js"
+#macro SAVE_VERSION      1
+#macro SAVE_SPAWN_LAYER  "Instances"
 
 function save_ensure_init() {
     if (variable_global_exists("save_init")) return;
@@ -11,7 +12,7 @@ function save_ensure_init() {
     global.save_vars = {
         oPlayer:         "*",
         oTimeOfDay:      "*",
-        oDayNightCycle:  "*",
+        oDayNightCycle:  [],
         oPlot:           "*",
         oChest:          ["contents"]
     };
@@ -21,14 +22,82 @@ function save_singleton_list() { return [oPlayer, oTimeOfDay, oDayNightCycle]; }
 
 function save_room_objects() { return [oPlot, oChest]; }
 
+function save_dynamic_objects() { return [oPlot]; }
+
+function save_global_names() {
+    return ["Day", "Time", "CropTick", "TimeOfDay", "TorchOn", "Coins", "day"];
+}
+
 function save_collect_globals() {
-    var _g = {};
+    var _g = { values: {} };
     if (variable_global_exists("inventory")) _g.inventory = global.inventory;
+
+    var _names = save_global_names();
+    for (var i = 0; i < array_length(_names); i++) {
+        if (variable_global_exists(_names[i])) {
+            _g.values[$ _names[i]] = variable_global_get(_names[i]);
+        }
+    }
     return _g;
 }
 
 function save_apply_globals(_g) {
     if (variable_struct_exists(_g, "inventory")) global.inventory = _g.inventory;
+
+    if (!variable_struct_exists(_g, "values")) return;
+    var _keys = variable_struct_get_names(_g.values);
+    for (var i = 0; i < array_length(_keys); i++) {
+        variable_global_set(_keys[i], _g.values[$ _keys[i]]);
+    }
+}
+
+function save_crop_list() {
+    var _list = [];
+    var _n = ["CropCorn", "CropPineapple", "CropRice", "CropStrawberry"];
+    for (var i = 0; i < array_length(_n); i++) {
+        if (variable_global_exists(_n[i])) array_push(_list, variable_global_get(_n[i]));
+    }
+    return _list;
+}
+
+function save_crop_to_id(_crop) {
+    if (!is_struct(_crop) || !variable_struct_exists(_crop, "Sprite")) return "";
+    return sprite_get_name(_crop.Sprite);
+}
+
+function save_crop_from_id(_id) {
+    if (!is_string(_id) || _id == "") return undefined;
+    var _list = save_crop_list();
+    for (var i = 0; i < array_length(_list); i++) {
+        if (sprite_get_name(_list[i].Sprite) == _id) return _list[i];
+    }
+    return undefined;
+}
+
+function save_slots_to_data(_arr) {
+    var _out = [];
+    for (var i = 0; i < array_length(_arr); i++) {
+        var _s = _arr[i];
+        if (is_array(_s) && array_length(_s) >= 2 && is_struct(_s[0])) {
+            array_push(_out, [save_item_to_data(_s[0]), _s[1]]);
+        } else {
+            array_push(_out, _s);
+        }
+    }
+    return _out;
+}
+
+function save_slots_from_data(_data) {
+    var _out = [];
+    for (var i = 0; i < array_length(_data); i++) {
+        var _s = _data[i];
+        if (is_array(_s) && array_length(_s) >= 2 && is_struct(_s[0])) {
+            array_push(_out, [save_item_from_data(_s[0]), _s[1]]);
+        } else {
+            array_push(_out, _s);
+        }
+    }
+    return _out;
 }
 
 function save_capture_instance(_inst, _obj) {
@@ -45,14 +114,20 @@ function save_capture_instance(_inst, _obj) {
             var _t = typeof(_v);
             if (_t == "number" || _t == "string" || _t == "bool") _entry.vars[$ _n] = _v;
         }
-        return _entry;
+    } else {
+        for (var i = 0; i < array_length(_names); i++) {
+            var _n = _names[i];
+            if (variable_instance_exists(_inst, _n)) {
+                _entry.vars[$ _n] = variable_instance_get(_inst, _n);
+            }
+        }
     }
 
-    for (var i = 0; i < array_length(_names); i++) {
-        var _n = _names[i];
-        if (variable_instance_exists(_inst, _n)) {
-            _entry.vars[$ _n] = variable_instance_get(_inst, _n);
-        }
+    if (_obj == oPlot && variable_instance_exists(_inst, "Crop")) {
+        _entry.vars[$ "CropId"] = save_crop_to_id(_inst.Crop);
+    }
+    if (variable_struct_exists(_entry.vars, "contents") && is_array(_entry.vars.contents)) {
+        _entry.vars.contents = save_slots_to_data(_entry.vars.contents);
     }
     return _entry;
 }
@@ -60,7 +135,14 @@ function save_capture_instance(_inst, _obj) {
 function save_apply_instance(_inst, _entry) {
     var _keys = variable_struct_get_names(_entry.vars);
     for (var i = 0; i < array_length(_keys); i++) {
-        variable_instance_set(_inst, _keys[i], _entry.vars[$ _keys[i]]);
+        var _k = _keys[i];
+        if (_k == "CropId") continue;
+        var _v = _entry.vars[$ _k];
+        if (_k == "contents" && is_array(_v)) _v = save_slots_from_data(_v);
+        variable_instance_set(_inst, _k, _v);
+    }
+    if (variable_struct_exists(_entry.vars, "CropId")) {
+        _inst.Crop = save_crop_from_id(_entry.vars.CropId);
     }
 }
 
@@ -72,11 +154,33 @@ function save_capture_objects(_obj) {
     return _list;
 }
 
+function save_spawn(_obj, _x, _y) {
+    if (layer_exists(SAVE_SPAWN_LAYER)) return instance_create_layer(_x, _y, SAVE_SPAWN_LAYER, _obj);
+    return instance_create_depth(_x, _y, 0, _obj);
+}
+
 function save_apply_objects(_obj, _list) {
+    var _dynamic = array_contains(save_dynamic_objects(), _obj);
+
     for (var i = 0; i < array_length(_list); i++) {
         var _e = _list[i];
+        var _target = noone;
+
         with (_obj) {
-            if (x == _e.x && y == _e.y) save_apply_instance(id, _e);
+            if (point_distance(x, y, _e.x, _e.y) < 1) { _target = id; break; }
+        }
+
+        if (_target == noone && _dynamic) _target = save_spawn(_obj, _e.x, _e.y);
+        if (_target != noone) save_apply_instance(_target, _e);
+    }
+
+    if (_dynamic) {
+        with (_obj) {
+            var _found = false;
+            for (var j = 0; j < array_length(_list); j++) {
+                if (point_distance(x, y, _list[j].x, _list[j].y) < 1) { _found = true; break; }
+            }
+            if (!_found) instance_destroy();
         }
     }
 }
@@ -131,6 +235,18 @@ function save_apply_room() {
     }
 }
 
+function save_on_room_end() {
+    save_ensure_init();
+    if (global.save_pending != undefined) return;
+    save_capture_room();
+}
+
+function save_on_room_start() {
+    save_ensure_init();
+    if (global.save_pending != undefined) return;
+    save_apply_room();
+}
+
 function save_write_text(_file, _text) {
     var _buf = buffer_create(string_byte_length(_text) + 1, buffer_fixed, 1);
     buffer_write(_buf, buffer_string, _text);
@@ -156,7 +272,7 @@ function save_try_read(_file) {
 }
 
 function save_data_exists() {
-    return file_exists(SAVE_FILE) || file_exists(SAVE_BACKUP);
+    return (save_try_read(SAVE_FILE) != undefined) || (save_try_read(SAVE_BACKUP) != undefined);
 }
 
 function save_game() {
@@ -216,21 +332,36 @@ function save_apply_pending() {
     save_apply_singletons(_d.singletons);
     save_apply_room();
     if (variable_struct_exists(_d, "inventory")) save_apply_inventory(_d.inventory);
-	
 
     antique_ensure_init();
     antique_apply_save_data(_d.antiques);
     with (oDigSpot) instance_destroy();
     global.antique_room = -1;
+
+    apply_day_stage();
+}
+
+function save_reset_runtime() {
+    save_ensure_init();
+    global.save_rooms = {};
+    global.save_pending = undefined;
+
+    global.Day = 1;
+    global.day = 1;
+    global.Time = 6 * 3600;
+    global.TimeOfDay = global.Time / 86400;
+    global.TorchOn = false;
+    global.CropTick = global.Day;
+    global.Coins = 100;
+
+    antique_ensure_init();
+    antique_reset_save();
 }
 
 function save_new_game() {
-    save_ensure_init();
     if (file_exists(SAVE_FILE)) file_delete(SAVE_FILE);
     if (file_exists(SAVE_BACKUP)) file_delete(SAVE_BACKUP);
-    global.save_rooms = {};
-    global.save_pending = undefined;
-    antique_reset_save();
+    save_reset_runtime();
 }
 
 function save_debug_print_vars(_obj) {
@@ -333,10 +464,3 @@ function save_apply_inventory(_data) {
         }
     }
 }
-
-//function save_collect_globals() {
-//    return {};
-//}
-
-//function save_apply_globals(_g) {
-//}

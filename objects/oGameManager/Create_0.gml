@@ -17,3 +17,12 @@ for (var i = 0; i < array_length(_layers); i++) {
     show_debug_message("layer: " + layer_get_name(_layers[i]));
 }
 day_stage_init();
+
+if (variable_global_exists("game_manager_initialized") && global.game_manager_initialized) {
+    instance_destroy();
+    exit;
+}
+global.game_manager_initialized = true;
+
+day = 1;
+time_of_day = 0;
