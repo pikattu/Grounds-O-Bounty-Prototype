@@ -135,6 +135,12 @@ function enemy_damage_player(_amount) {
     if (!instance_exists(oPlayer)) return false;
     if (enemy_player_invincible()) return false;
 
+    if (antique_consume()) {
+        show_debug_message("Antique used. Enemy removed.");
+        instance_destroy();
+        return false;
+    }
+
     var _left = enemy_hits_left() - 1;
     global.player_hits_left = _left;
     global.enemy_last_hit_time = current_time;

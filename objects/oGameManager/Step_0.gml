@@ -17,6 +17,7 @@ if (keyboard_check_pressed(vk_left)) {
 
 if (keyboard_check_pressed(vk_f5)) save_game();
 if (keyboard_check_pressed(vk_f9)) load_game();
+if (keyboard_check_pressed(vk_f1)) antique_give_item(0);
 if (keyboard_check_pressed(vk_f6)) {
     var _objs = [oPlot, oChest, oPlayer, oTimeOfDay, oDayNightCycle];
     for (var i = 0; i < array_length(_objs); i++) save_debug_print_vars(_objs[i]);

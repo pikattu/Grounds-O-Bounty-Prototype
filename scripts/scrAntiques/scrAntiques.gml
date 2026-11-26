@@ -247,3 +247,26 @@ function antique_learn_dirt_tile() {
     _s += "];";
     show_debug_message(_s);
 }
+function antique_total() {
+    antique_ensure_init();
+    var _n = 0;
+    for (var i = 0; i < array_length(global.antique_found); i++) {
+        _n += global.antique_found[i];
+    }
+    return _n;
+}
+
+function player_has_antique() {
+    return antique_total() > 0;
+}
+
+function antique_consume() {
+    antique_ensure_init();
+    for (var i = 0; i < array_length(global.antique_found); i++) {
+        if (global.antique_found[i] > 0) {
+            global.antique_found[i] -= 1;
+            return true;
+        }
+    }
+    return false;
+}
