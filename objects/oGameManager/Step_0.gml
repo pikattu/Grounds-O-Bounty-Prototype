@@ -1,4 +1,19 @@
 save_apply_pending();
+controls_ensure();
+if (keyboard_check_pressed(vk_f10)) day_stage_report();
+show_debug_message("right key | instance " + string(id) + " | Day " + string(global.Day));
+if (keyboard_check_pressed(vk_right)) {
+    global.Day++;
+    if (global.Day > 6) global.Day = 1;
+    global.CropTick = global.Day;
+    apply_day_stage();
+}
+
+if (keyboard_check_pressed(vk_left)) {
+    global.Day = 1;
+    global.CropTick = global.Day;
+    apply_day_stage();
+}
 
 if (keyboard_check_pressed(vk_f5)) save_game();
 if (keyboard_check_pressed(vk_f9)) load_game();

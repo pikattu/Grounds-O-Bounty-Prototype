@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scrDayStage",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scrDayStage",
+  "parent":{
+    "name":"GroundsOBounty",
+    "path":"GroundsOBounty.yyp",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

@@ -78,7 +78,7 @@ function dialogue_step() {
 
     if (!active) {
         near_npc = noone;
-        if (_box || _was_box) exit;
+        if (_box || _was_box || controls_is_open()) exit;
 
         var _list = [oEduardo, oHope, oJoshua, oKristine, oMJ, oPrincess];
 

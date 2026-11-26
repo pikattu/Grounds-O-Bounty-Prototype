@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scrControlsMenu",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scrControlsMenu",
+  "parent":{
+    "name":"GroundsOBounty",
+    "path":"GroundsOBounty.yyp",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

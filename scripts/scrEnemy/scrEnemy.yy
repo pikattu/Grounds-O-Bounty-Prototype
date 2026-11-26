@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scrEnemy",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scrEnemy",
+  "parent":{
+    "name":"GroundsOBounty",
+    "path":"GroundsOBounty.yyp",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

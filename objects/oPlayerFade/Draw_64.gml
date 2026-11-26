@@ -1,0 +1,1 @@
+fade_draw_gui();

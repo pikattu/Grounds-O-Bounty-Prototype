@@ -17,6 +17,11 @@ if (Mag > 0) {
     vVel /= Mag;
 }
 
+if (enemy_player_invincible()) {
+    image_alpha = (((current_time div 100) mod 2) == 0) ? 0.35 : 1;
+} else {
+    image_alpha = 1;
+}
 
 
 // Animations
